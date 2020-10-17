@@ -1,1 +1,3 @@
-testing testing
+int main(){
+  return 0;
+}
