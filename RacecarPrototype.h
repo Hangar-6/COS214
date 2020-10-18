@@ -28,6 +28,7 @@ public:
   //Virtual Functions
   virtual RacecarPrototype* clone()=0; //Returns prototype
   virtual void printReport()=0; //Prints report of changes
+  virtual void upgrade()=0; //Menu driven upgrade function
 };
 
 

@@ -8,8 +8,6 @@
 #include "RacecarPrototype.h"
 
 class ElectronicsPrototype {
-public:
-
 private:
   //Constructor
   ElectronicsPrototype(RacecarDecorator*);
@@ -17,6 +15,7 @@ private:
   //Virtual Functions Implementation
   RacecarPrototype* clone(); //Returns prototype
   void printReport(); //Prints report of changes
+  void upgrade(); //Menu driven upgrade function
 };
 
 
