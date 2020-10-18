@@ -1,14 +1,17 @@
 #ifndef TYREHARD_H
 #define TYREHARD_H
 
-using namespace std;
+#include "Tyres.h"
+#include <string>
 
-class TyreHard{
-
-private:
-
-public:
-    
+class TyreHard : public Tyres {
+    private:    
+        int durability;
+        std::string type;
+        
+    public:
+        TyreHard();
+        Tyres* clone();
 };
 
 #endif

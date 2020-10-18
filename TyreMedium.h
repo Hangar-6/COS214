@@ -1,14 +1,17 @@
 #ifndef TYREMEDIUM_H
 #define TYREMEDIUM_H
 
-using namespace std;
+#include "Tyres.h"
+#include <string>
 
-class TyreMedium{
-
-private:
-
-public:
-
+class TyreMedium : public Tyres {
+    private:    
+        int durability;
+        std::string type;
+        
+    public:
+        TyreMedium();
+        Tyres* clone();
 };
 
 #endif
