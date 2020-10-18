@@ -17,7 +17,7 @@ private:
 
   //Unique Methods
   int getReliability();
-  void setReliability();
+  void setReliability(int reliability);
 
   //Implementing virtual functions
   string getType();

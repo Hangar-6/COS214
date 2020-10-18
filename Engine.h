@@ -17,7 +17,7 @@ private:
 
   //Unique Methods
   int getPower();
-  void setPower();
+  void setPower(int power);
 
   //Implementing virtual functions
   string getType();

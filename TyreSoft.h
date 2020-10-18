@@ -5,13 +5,13 @@
 #include <string>
 
 class TyreSoft : public Tyres {
-    private:    
-        int durability;
+    private:
         std::string type;
-        
+
     public:
         TyreSoft();
         Tyres* clone();
+        string getType();
 };
 
 #endif

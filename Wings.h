@@ -17,7 +17,7 @@ private:
 
   //Unique Methods
   int getAirResistance();
-  void setAirResistance();
+  void setAirResistance(int airResistance);
 
   //Implementing virtual functions
   string getType();

@@ -17,7 +17,7 @@ private:
 
   //Unique Methods
   int getStrength();
-  void setStrength();
+  void setStrength(int strength);
 
   //Implementing virtual functions
   string getType();

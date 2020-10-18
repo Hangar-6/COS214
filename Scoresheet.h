@@ -11,8 +11,9 @@ class Scoresheet {
     private:
         int ConstructorPoints;
         F1RacesResults* results;
-
     public:
+        Scoresheet();
+        Scoresheet(F1RacesResults* results);
         void update(int points);
         void setRaceResults(F1RacesResults* _results);      // register with subject
 };

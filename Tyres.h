@@ -10,14 +10,14 @@
 
 class Tyres : public RacecarDecorator {
 public:
-  int wear;
+  int durability;
 
 private:
   Tyres();
 
   //Unique Methods
-  int getWear();
-  void setWear();
+  int getDurability();
+  void setDurability(int durability);
 
   //Implementing virtual functions
   virtual string getType()=0;
