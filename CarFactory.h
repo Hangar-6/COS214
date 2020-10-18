@@ -6,7 +6,7 @@
 #define COS214_CARFACTORY_H
 #include "Car.h"
 
-class CarFactory:RacecarFactory {
+class CarFactory {
 private:
   Car* myCar;
 

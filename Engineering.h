@@ -19,7 +19,7 @@ private:
 
 public:
   Engineering(EngineDep* engine,AerodynamicsDep* aeroDynamic,ElectronicsDep* electronic,ChassisDep* chassis);
-
+  virtual void AssembleCar()=0;
 
 
 };
