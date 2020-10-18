@@ -18,14 +18,15 @@ private:
     string venue;
 public:
     WeekendFactory(){}
-    virtual void start()=0;
-    virtual void end()=0;
+    void setVenueAndType(string v, string t){this->venue = v;this->type = t;}
     string getType(){return this->type;}
     int getTeams(){return this->teams;}
     ScoreSheet* getResults(){return this->results;}
     string getVenue(){return this->venue;}
     Car* getCar(){return this->car;}
-    void setVenueAndType(string v, string t);
+
+    virtual void start()=0;
+    virtual void end()=0;
 };
 //Creator (Factory Method)
 #endif
