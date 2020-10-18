@@ -4,18 +4,19 @@
 
 #ifndef COS214_CAR_H
 #define COS214_CAR_H
-#include "RacecarDecorator"
+#include "RacecarDecorator.h"
+#include <string>
 
 class Car {
   private:
     RacecarDecorator **myDecorators;
-    string name;
+    std::string name;
 
   public:
-    Car(string name);
+    Car(std::string name);
     void add(Car*);
-    string getName();
-    virtual string getType()=0;
+    std::string getName();
+    virtual std::string getType()=0;
 
 };
 

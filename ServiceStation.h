@@ -5,13 +5,13 @@
 #ifndef COS214_SERVICESTATION_H
 #define COS214_SERVICESTATION_H
 
-#include "Racecar.h"
+#include "Car.h"
 
 class ServiceStation {
     private:
 
     public:
-        void service(Racecar* car);
+        void service(Car* car);
 };  
 
 #endif //COS214_SERVICESTATION_H
