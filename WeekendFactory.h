@@ -25,6 +25,7 @@ public:
     int getTeams(){return this->teams;}
     ScoreSheet* getResults(){return this->results;}
     string getVenue(){return this->venue;}
+    string getLocation() {return this->location;}
     Car* getCar(){return this->car;}
 
     virtual void start()=0;
