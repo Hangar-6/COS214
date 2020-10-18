@@ -1,13 +1,20 @@
 //
-// Created by Luca Azmanov on 2020/10/17.
+// Created by Luca Azmanov, u19004185
 //
 
 #ifndef COS214_WINGSPROTOTYPE_H
 #define COS214_WINGSPROTOTYPE_H
 
+#include "RacecarPrototype.h"
 
 class WingsPrototype {
+public:
+  //Constructor
+  WingsPrototype(RacecarDecorator*);
 
+  //Virtual Functions Implementation
+  RacecarPrototype* clone(); //Returns prototype
+  void printReport(); //Prints report of changes
 };
 
 
