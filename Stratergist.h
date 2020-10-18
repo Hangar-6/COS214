@@ -5,6 +5,7 @@
 #ifndef COS214_STRATERGIST_H
 #define COS214_STRATERGIST_H
 #include "TyreStrategy.h"
+#include "RaceWeekend.h"
 
 class Stratergist {
 private:
@@ -12,7 +13,7 @@ private:
 public:
     Stratergist();
     ~Stratergist();
-    void DecideStrat();
+    void DecideStrat(RaceWeekend* RW);
 };
 
 
