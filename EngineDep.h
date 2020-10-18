@@ -4,10 +4,12 @@
 
 #ifndef COS214_ENGINEDEP_H
 #define COS214_ENGINEDEP_H
+#include "Departments.h"
 
-
-class EngineDep {
-
+class EngineDep : public Departments{
+public:
+    EngineDep();
+    virtual void produceComponent();
 };
 
 
