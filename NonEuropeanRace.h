@@ -5,8 +5,9 @@
 #ifndef COS214_NONEUROPEANRACE_H
 #define COS214_NONEUROPEANRACE_H
 
+#include "RaceWeekend.h"
 
-class NonEuropeanRace {
+class NonEuropeanRace : public RaceWeekend {
 
 };
 

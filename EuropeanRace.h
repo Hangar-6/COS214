@@ -5,10 +5,10 @@
 #ifndef COS214_EUROPEANRACE_H
 #define COS214_EUROPEANRACE_H
 
+#include "RaceWeekend.h"
 
-class EuropeanRace {
+class EuropeanRace : public RaceWeekend {
 
 };
-
 
 #endif //COS214_EUROPEANRACE_H
