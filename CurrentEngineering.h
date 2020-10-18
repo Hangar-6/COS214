@@ -4,9 +4,9 @@
 
 #ifndef COS214_CURRENTENGINEERING_H
 #define COS214_CURRENTENGINEERING_H
+#include "Engineering.h"
 
-
-class CurrentEngineering {
+class CurrentEngineering: public Engineering {
 
 };
 

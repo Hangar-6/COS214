@@ -4,9 +4,9 @@
 
 #ifndef COS214_NEXTENGINEERING_H
 #define COS214_NEXTENGINEERING_H
+#include "Engineering.h"
 
-
-class NextEngineering {
+class NextEngineering: public Engineering {
 
 };
 

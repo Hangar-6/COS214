@@ -4,10 +4,12 @@
 
 #ifndef COS214_ELECTRONICSDEP_H
 #define COS214_ELECTRONICSDEP_H
+#include "Departments.h"
 
-
-class ElectronicsDep {
-
+class ElectronicsDep : public Departments{
+public:
+    ElectronicsDep();
+    virtual void produceComponent();
 };
 
 

@@ -4,7 +4,7 @@
 
 #ifndef COS214_RACECARFACTORY_H
 #define COS214_RACECARFACTORY_H
-
+#include "Car.h"
 
 class RacecarFactory {
   Car* CreateCar();

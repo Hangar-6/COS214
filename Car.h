@@ -4,7 +4,7 @@
 
 #ifndef COS214_CAR_H
 #define COS214_CAR_H
-
+#include "RacecarDecorator"
 
 class Car {
   private:
