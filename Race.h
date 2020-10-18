@@ -1,8 +1,19 @@
 #ifndef RACE_H
 #define RACE_H
 
-class Race {
+#include "WeekendFactory.h"
+#include <string>
+#include <stdlib.h>
+#include <iostream>
+#include <sstream>
 
+class Race: public WeekendFactory{
+
+public:
+    Race();
+    ~Race();
+    void start();
+    void end();
 };
-
+//ConcreteCreator
 #endif
