@@ -4,10 +4,12 @@
 
 #ifndef COS214_CHASSISDEP_H
 #define COS214_CHASSISDEP_H
+#include "Departments.h"
 
-
-class ChassisDep {
-
+class ChassisDep :public Departments{
+public:
+    ChassisDep();
+    virtual void produceComponent();
 };
 
 
