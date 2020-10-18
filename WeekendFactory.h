@@ -12,13 +12,15 @@ class WeekendFactory {
 
 private:
     string type;//type of race
+    string venue;
+    string location;
     int teams;//amount of teams participating
     ScoreSheet* results;
     Car* car;
-    string venue;
 public:
     WeekendFactory(){}
     void setVenueAndType(string v, string t){this->venue = v;this->type = t;}
+    void setlocation(string l){this->location = l;}
     string getType(){return this->type;}
     int getTeams(){return this->teams;}
     ScoreSheet* getResults(){return this->results;}
