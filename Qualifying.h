@@ -10,8 +10,8 @@
 class Qualifying: public WeekendFactory {
 
 public:
-    Practice();
-    ~Practice();
+    Qualifying();
+    ~Qualifying();
     void start();
     void end();
 };
