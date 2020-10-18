@@ -10,10 +10,7 @@
 class EnginePrototype {
 public:
   //Constructor
-  EnginePrototype(RacecarDecorator*);
-
-  //Unique Functions
-  void editEngine();
+  WingsPrototype(RacecarDecorator*);
 
   //Virtual Functions Implementation
   RacecarPrototype* clone(); //Returns prototype

@@ -16,7 +16,7 @@ private:
   RacecarDecorator* proto; //Stores RacecarDecorator (i.e. engine, wings etc.)
 
 public:
-  //Constructor, Overriden and Destructor
+  //Constructor and Destructor
   RacecarPrototype();
   RacecarPrototype(RacecarDecorator*); //Overriden Constructor with RacecarDecorator component
   virtual ~RacecarPrototype();

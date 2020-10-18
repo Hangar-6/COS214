@@ -12,9 +12,6 @@ public:
   //Constructor
   WingsPrototype(RacecarDecorator*);
 
-  //Unique Functions
-  void editWings();
-
   //Virtual Functions Implementation
   RacecarPrototype* clone(); //Returns prototype
   void printReport(); //Prints report of changes
