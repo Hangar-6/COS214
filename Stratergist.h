@@ -5,11 +5,10 @@
 #ifndef COS214_STRATERGIST_H
 #define COS214_STRATERGIST_H
 #include "TyreStrategy.h"
+#include "LocationStrategy.h"
 #include "RaceWeekend.h"
 
 class Stratergist {
-private:
-    TyreStrategy* strategy;
 public:
     Stratergist();
     ~Stratergist();
