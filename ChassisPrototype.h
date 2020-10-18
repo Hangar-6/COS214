@@ -12,6 +12,9 @@ public:
   //Constructor
   ChassisPrototype(RacecarDecorator*);
 
+  //Unique Functions
+  void editChassis();
+
   //Virtual Functions Implementation
   RacecarPrototype* clone(); //Returns prototype
   void printReport(); //Prints report of changes

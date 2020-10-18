@@ -9,10 +9,11 @@
 
 class ElectronicsPrototype {
 public:
-
-private:
   //Constructor
   ElectronicsPrototype(RacecarDecorator*);
+
+  //Unique Functions
+  void editElectronics();
 
   //Virtual Functions Implementation
   RacecarPrototype* clone(); //Returns prototype
