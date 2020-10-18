@@ -12,7 +12,7 @@ private:
 public:
     Departments();
     virtual ~Departments();
-    virtual void produceComponent() = 0;
+    virtual RacecarPrototype* produceComponent() = 0;
     RacecarPrototype* NextComponent();
     //Discuss with group memebers on what other functions to add
 };

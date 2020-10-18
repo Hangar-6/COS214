@@ -9,7 +9,7 @@
 class AerodynamicsDep : public Departments{
 public:
     AerodynamicsDep();
-    virtual void produceComponent();
+    virtual RacecarPrototype* produceComponent();
 };
 
 

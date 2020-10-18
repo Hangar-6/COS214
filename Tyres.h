@@ -6,10 +6,10 @@
 #define COS214_TYRES_H
 
 #include "RacecarDecorator.h"
+#include "TyreType.h"
 
 class Tyres : public RacecarDecorator {
 public:
-  const string type;
   int wear;
 
 private:
@@ -20,7 +20,7 @@ private:
   void setWear();
 
   //Implementing virtual functions
-  string getType();
+  virtual string getType()=0;
 };
 
 
