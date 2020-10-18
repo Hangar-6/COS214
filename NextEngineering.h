@@ -7,7 +7,8 @@
 #include "Engineering.h"
 
 class NextEngineering: public Engineering {
-
+  public:
+    void AssembleCar();
 };
 
 

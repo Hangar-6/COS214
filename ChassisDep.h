@@ -9,7 +9,7 @@
 class ChassisDep :public Departments{
 public:
     ChassisDep();
-    virtual void produceComponent();
+    virtual RacecarPrototype* produceComponent();
 };
 
 

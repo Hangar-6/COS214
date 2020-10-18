@@ -5,9 +5,12 @@
 #ifndef COS214_RACECARFACTORY_H
 #define COS214_RACECARFACTORY_H
 #include "Car.h"
+#include "CarFactory.h"
 
-class RacecarFactory {
-  Car* CreateCar();
+class RacecarFactory:public CarFactory {
+
+    public:
+      Car* CreateCar();
 };
 
 

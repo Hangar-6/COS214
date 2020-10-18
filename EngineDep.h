@@ -9,7 +9,7 @@
 class EngineDep : public Departments{
 public:
     EngineDep();
-    virtual void produceComponent();
+    virtual RacecarPrototype* produceComponent();
 };
 
 
