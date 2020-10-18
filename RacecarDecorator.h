@@ -5,8 +5,12 @@
 #ifndef COS214_RACECARDECORATOR_H
 #define COS214_RACECARDECORATOR_H
 
+#include "Car.h"
 
-class RacecarDecorator {
+class RacecarDecorator : public Car {
+public:
+
+private:
 
 };
 

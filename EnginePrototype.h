@@ -7,7 +7,7 @@
 
 #include "RacecarPrototype.h"
 
-class EnginePrototype {
+class EnginePrototype : public RacecarPrototype {
 public:
   //Constructor
   WingsPrototype(RacecarDecorator*);

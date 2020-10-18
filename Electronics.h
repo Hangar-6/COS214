@@ -5,8 +5,9 @@
 #ifndef COS214_ELECTRONICS_H
 #define COS214_ELECTRONICS_H
 
+#include "RacecarDecorator.h"
 
-class Electronics {
+class Electronics : public RacecarDecorator {
 
 };
 

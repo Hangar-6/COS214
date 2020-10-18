@@ -5,8 +5,9 @@
 #ifndef COS214_ENGINE_H
 #define COS214_ENGINE_H
 
+#include "RacecarDecorator.h"
 
-class Engine {
+class Engine : public RacecarDecorator {
 
 };
 

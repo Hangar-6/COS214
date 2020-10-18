@@ -5,8 +5,9 @@
 #ifndef COS214_CHASSIS_H
 #define COS214_CHASSIS_H
 
+#include "RacecarDecorator.h"
 
-class Chassis {
+class Chassis : public RacecarDecorator {
 
 };
 

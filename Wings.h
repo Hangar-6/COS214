@@ -5,8 +5,9 @@
 #ifndef COS214_WINGS_H
 #define COS214_WINGS_H
 
+#include "RacecarDecorator.h"
 
-class Wings {
+class Wings : public RacecarDecorator {
 
 };
 
