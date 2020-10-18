@@ -8,7 +8,19 @@
 #include "RacecarDecorator.h"
 
 class Chassis : public RacecarDecorator {
+public:
+  const string type;
+  int strength;
 
+private:
+  Chassis();
+
+  //Unique Methods
+  int getStrength();
+  void setStrength();
+
+  //Implementing virtual functions
+  string getType();
 };
 
 

@@ -8,7 +8,19 @@
 #include "RacecarDecorator.h"
 
 class Electronics : public RacecarDecorator {
+public:
+  const string type;
+  int reliability;
 
+private:
+  Electronics();
+
+  //Unique Methods
+  int getReliability();
+  void setReliability();
+
+  //Implementing virtual functions
+  string getType();
 };
 
 

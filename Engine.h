@@ -8,7 +8,19 @@
 #include "RacecarDecorator.h"
 
 class Engine : public RacecarDecorator {
+public:
+  const string type;
+  int power;
 
+private:
+  Engine();
+
+  //Unique Methods
+  int getPower();
+  void setPower();
+
+  //Implementing virtual functions
+  string getType();
 };
 
 

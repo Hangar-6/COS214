@@ -8,7 +8,19 @@
 #include "RacecarDecorator.h"
 
 class Wings : public RacecarDecorator {
+public:
+  const string type;
+  int airResistance;
 
+private:
+  Wings();
+
+  //Unique Methods
+  int getAirResistance();
+  void setAirResistance();
+
+  //Implementing virtual functions
+  string getType();
 };
 
 

@@ -8,10 +8,12 @@
 #include "Car.h"
 
 class RacecarDecorator : public Car {
-public:
-
 private:
+  RacecarDecorator();
+  virtual ~RacecarDecorator();
 
+  //Implementing virtual functions
+  string getType();
 };
 
 

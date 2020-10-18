@@ -8,7 +8,19 @@
 #include "RacecarDecorator.h"
 
 class Tyres : public RacecarDecorator {
+public:
+  const string type;
+  int wear;
 
+private:
+  Tyres();
+
+  //Unique Methods
+  int getWear();
+  void setWear();
+
+  //Implementing virtual functions
+  string getType();
 };
 
 

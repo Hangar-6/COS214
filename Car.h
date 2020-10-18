@@ -10,7 +10,6 @@ class Car {
   private:
     RacecarDecorator **myDecorators;
     string name;
-    string type;
 
   public:
     Car(string name);
