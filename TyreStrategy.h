@@ -1,7 +1,6 @@
 #ifndef TYRESTRATEGY_H
 #define TYRESTRATEGY_H
 
-// Tinashe is a bitch
 #include <string>
 #include <stdlib.h>
 #include <iostream>
