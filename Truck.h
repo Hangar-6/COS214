@@ -4,10 +4,16 @@
 
 #ifndef COS214_TRUCK_H
 #define COS214_TRUCK_H
+#include "Transport"
 
 
 class Truck {
+private:
 
+public:
+  Truck();
+  string getType();
+  void executeTransport();
 };
 
 

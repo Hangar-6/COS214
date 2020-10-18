@@ -4,10 +4,14 @@
 
 #ifndef COS214_MOTOREQUIPMENT_H
 #define COS214_MOTOREQUIPMENT_H
+#include "Equipment"
 
+class MotorEquipment: public Equipment {
+private:
 
-class MotorEquipment {
-
+public:
+  MotorEquipment()
+  string getType();
 };
 
 

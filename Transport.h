@@ -5,9 +5,17 @@
 #ifndef COS214_TRANSPORT_H
 #define COS214_TRANSPORT_H
 
-
 class Transport {
+private:
+  string TransportName;
+  final string TransportType;
 
+public:
+  Transport(string name);
+  string getName();
+  void setName();
+  virtual string getType()=0;
+  virtual void executeTransport()=0;
 };
 
 

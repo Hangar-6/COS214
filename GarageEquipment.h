@@ -4,10 +4,14 @@
 
 #ifndef COS214_GARAGEEQUIPMENT_H
 #define COS214_GARAGEEQUIPMENT_H
+#include "Equipment"
 
+class GarageEquipment : public Equipment {
+private:
 
-class GarageEquipment {
-
+public:
+  GarageEquipment();
+  string getType();
 };
 
 

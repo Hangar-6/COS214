@@ -7,7 +7,7 @@
 
 
 class RacecarFactory {
-
+  Car* CreateCar();
 };
 
 

@@ -4,9 +4,16 @@
 
 #ifndef COS214_PLANE_H
 #define COS214_PLANE_H
+#include "Transport"
 
 
-class Plane {
+class Plane:Transport {
+private:
+
+public:
+  Plane();
+  string getType();
+  void executeTransport();
 
 };
 

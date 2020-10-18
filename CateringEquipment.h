@@ -4,10 +4,14 @@
 
 #ifndef COS214_CATERINGEQUIPMENT_H
 #define COS214_CATERINGEQUIPMENT_H
+#include "Equipment"
 
+class CateringEquipment: public Equipment {
+private:
 
-class CateringEquipment {
-
+public:
+  CateringEquipment(string equipmentType);
+  string getType();
 };
 
 
