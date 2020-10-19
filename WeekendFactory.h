@@ -27,6 +27,7 @@ public:
     string getVenue(){return this->venue;}
     string getLocation() {return this->location;}
     Car* getCar(){return this->car;}
+    void setCar(Car* racecar);
 
     virtual void start()=0;
     virtual void end()=0;
