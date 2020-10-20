@@ -19,15 +19,16 @@ private:
     Car* car;
 public:
     WeekendFactory(){}
-    void setVenueAndType(string v, string t){this->venue = v;this->type = t;}
-    void setlocation(string l){this->location = l;}
-    string getType(){return this->type;}
-    int getTeams(){return this->teams;}
-    ScoreSheet* getResults(){return this->results;}
-    string getVenue(){return this->venue;}
-    string getLocation() {return this->location;}
-    Car* getCar(){return this->car;}
+    void setVenue(string v);
+    string getVenue();
+    void setLocation(string l);
+    string getLocation();
+    void setType(string t);
+    string getType();
+    int getTeams();
+    ScoreSheet* getResults();
     void setCar(Car* racecar);
+    Car* getCar();
 
     virtual void start()=0;
     virtual void end()=0;
