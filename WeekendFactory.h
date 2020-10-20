@@ -14,7 +14,7 @@ private:
     string type;//type of race
     string venue;
     string location;
-    int teams;//amount of teams participating
+    int teams = 10;//amount of teams participating
     ScoreSheet* results;
     Car* car;
 public:
@@ -26,6 +26,7 @@ public:
     void setType(string t);
     string getType();
     int getTeams();
+    void setScoresheet();
     ScoreSheet* getResults();
     void setCar(Car* racecar);
     Car* getCar();

@@ -14,6 +14,10 @@ void WeekendFactory::setType(int t){
     this->type = t;
 }
 
+void WeekendFactory::setScoresheet(){
+    
+}
+
 void WeekendFactory::setCar(Car* racecar){
     this->car = racecar;
 }

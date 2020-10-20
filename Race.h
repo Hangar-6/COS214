@@ -10,7 +10,7 @@
 class Race: public WeekendFactory{
 
 public:
-    Race();
+    Race(string v, string l, Car* c);
     ~Race();
     void start();
     void end();

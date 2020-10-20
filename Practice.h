@@ -10,7 +10,7 @@
 class Practice: public WeekendFactory {
 
 public:
-    Practice();
+    Practice(string v, string l, Car* c);
     ~Practice();
     void start();
     void end();

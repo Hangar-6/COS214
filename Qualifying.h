@@ -10,7 +10,7 @@
 class Qualifying: public WeekendFactory {
 
 public:
-    Qualifying();
+    Qualifying(string v, string l, Car* c);
     ~Qualifying();
     void start();
     void end();
