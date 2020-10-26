@@ -1,27 +1,13 @@
-//
-// Created by user-pc on 2020/10/17.
-//
+#ifndef ELECTRONICS_H
+#define ELECTRONICS_H
 
-#ifndef COS214_ELECTRONICS_H
-#define COS214_ELECTRONICS_H
+#include "Component.h"
 
-#include "RacecarDecorator.h"
-
-class Electronics : public RacecarDecorator {
-public:
-  const string type;
-  int reliability;
-
-private:
-  Electronics();
-
-  //Unique Methods
-  int getReliability();
-  void setReliability(int reliability);
-
-  //Implementing virtual functions
-  string getType();
+class Electronics : public Component {
+    public:
+        Electronics(int _performance);
+        void add(Car* component);
+        Car* clone();
 };
 
-
-#endif //COS214_ELECTRONICS_H
+#endif

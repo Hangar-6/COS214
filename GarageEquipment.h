@@ -1,18 +1,11 @@
-//
-// Created by user-pc on 2020/10/17.
-//
+#ifndef GARAGEEQUIPMENT_H
+#define GARAGEEQUIPMENT_H
 
-#ifndef COS214_GARAGEEQUIPMENT_H
-#define COS214_GARAGEEQUIPMENT_H
-#include "Equipment"
+#include "Equipment.h"
 
 class GarageEquipment : public Equipment {
-private:
-
-public:
-  GarageEquipment();
-  string getType();
+    public:
+        GarageEquipment(); // set type to EQUIPMENT
 };
 
-
-#endif //COS214_GARAGEEQUIPMENT_H
+#endif

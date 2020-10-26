@@ -1,18 +1,11 @@
-//
-// Created by user-pc on 2020/10/17.
-//
+#ifndef CATERINGEQUIPMENT_H
+#define CATERINGEQUIPMENT_H
 
-#ifndef COS214_CATERINGEQUIPMENT_H
-#define COS214_CATERINGEQUIPMENT_H
-#include "Equipment"
+#include "Equipment.h"
 
-class CateringEquipment: public Equipment {
-private:
-
-public:
-  CateringEquipment(string equipmentType);
-  string getType();
+class CateringEquipment : public Equipment {
+    public:
+        CateringEquipment();    // set type to CATERING
 };
 
-
-#endif //COS214_CATERINGEQUIPMENT_H
+#endif

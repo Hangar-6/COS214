@@ -1,28 +1,15 @@
-//
-// Created by user-pc on 2020/10/17.
-//
+#ifndef EQUIPMENT_H
+#define EQUIPMENT_H
 
-#ifndef COS214_EQUIPMENT_H
-#define COS214_EQUIPMENT_H
-#include "Equipment"
+enum EquipmentType {GARAGE, CATERING, CAR};
 
 class Equipment {
-private:
-  string EquipmentName;
-  final string EquipmentType;
-  int quantity;
+    protected:
+        EquipmentType type;
 
-public:
-  Equipment();
-  void setName(string n);
-  string getName();
-  int getQuantity();
-  void decrementQuantity();
-  void incrementQuantity();
-  bool isEmpty();
-  void showTypeAndQuantity(); // Template method that calls getType and getQuantity...
-  virtual string getType()=0;
+    public:
+        Equipment(EquipmentType _type);
+        EquipmentType getType();
 };
 
-
-#endif //COS214_EQUIPMENT_H
+#endif

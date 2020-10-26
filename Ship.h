@@ -1,19 +1,11 @@
-//
-// Created by user-pc on 2020/10/17.
-//
+#ifndef SHIP_H
+#define SHIP_H
 
-#ifndef COS214_SHIP_H
-#define COS214_SHIP_H
-#include "Transport"
+#include "Logistics.h"
 
-class Ship:Transport {
-private:
-
-public:
-  Ship();
-  string getType();
-  void executeTransport();
+class Ship : public Logistics {
+    public:
+        void transport(RaceWeekend* race);
 };
 
-
-#endif //COS214_SHIP_H
+#endif

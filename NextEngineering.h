@@ -1,15 +1,11 @@
-//
-// Created by Luca Azmanov on 2020/10/17.
-//
+#ifndef NEXTENGINEERING_H
+#define NEXTENGINEERING_H
 
-#ifndef COS214_NEXTENGINEERING_H
-#define COS214_NEXTENGINEERING_H
 #include "Engineering.h"
 
-class NextEngineering: public Engineering {
-  public:
-    void AssembleCar();
+class NextEngineering : public Engineering {
+    public:
+        void buildComponents();
 };
 
-
-#endif //COS214_NEXTENGINEERING_H
+#endif

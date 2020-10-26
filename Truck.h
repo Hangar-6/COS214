@@ -1,20 +1,11 @@
-//
-// Created by user-pc on 2020/10/17.
-//
+#ifndef TRUCK_H
+#define TRUCK_H
 
-#ifndef COS214_TRUCK_H
-#define COS214_TRUCK_H
-#include "Transport"
+#include "Logistics.h"
 
-
-class Truck {
-private:
-
-public:
-  Truck();
-  string getType();
-  void executeTransport();
+class Truck : public Logistics {
+    public:
+        void transport(RaceWeekend* race);
 };
 
-
-#endif //COS214_TRUCK_H
+#endif
