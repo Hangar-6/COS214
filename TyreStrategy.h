@@ -6,7 +6,6 @@ using namespace std;
 #include "Tyre.h"
 #include <vector>
 
-
 // Abstract startegy class
 // Pushes 5 sets of tyres into a vector and returns to Strategist 
     

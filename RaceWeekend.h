@@ -10,7 +10,7 @@ enum RecommendedStrategy {AGGRESSIVE, BALANCED, CONSERVATIVE};
 class RaceWeekend {
     protected:
         Location* location;
-        RecommendedStrategy* strategy;
+        RecommendedStrategy strategy;
         RaceSession* practice;
         RaceSession* qualifying;
         RaceSession* race;
@@ -19,8 +19,8 @@ class RaceWeekend {
         RaceWeekend(Location* _location);
         ~RaceWeekend();
         void enter(Team* team);
-        int determinePoints(int position);
-        void runSessions();
+        int determinePoints(FinishPosition positions);      // set Team's points to total points scored
+        void runSessions(Team* team);                       // run practice, qualifying and race and determine points after race
 };
 
 #endif

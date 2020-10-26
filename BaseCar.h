@@ -15,6 +15,7 @@ class BaseCar : public Car {
         BaseCar();
         void add(Car* component);
         Car* clone();
+        void setTyres(vector<Tyre*> _tyres);
 };
 
 #endif

@@ -5,7 +5,7 @@
 
 class Simulation : public Testing {
     public:
-        void test(Engineering* engineering, TestType type);
+        void test(Engineering* engineering, TestType type);     // handles test of type SIMULATION
         void notify(Engineering* engineering, TestResult result);
 };
 

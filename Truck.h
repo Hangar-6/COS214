@@ -5,7 +5,7 @@
 
 class Truck : public Logistics {
     public:
-        void transport(RaceWeekend* race);
+        void transport(RaceWeekend* race, Container* container);        // Truck used if LocationType is EUROPEAN
 };
 
 #endif

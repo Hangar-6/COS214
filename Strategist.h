@@ -7,7 +7,9 @@
 
 class Strategist {
     public:
-        void strategy(Car* car1, Car* car2, RaceWeekend* race);
+        void strategy(Car* car1, Car* car2, RaceWeekend* race);    
+        // Identifies RecommendedStrategy from RaceWeekend and 
+        // chooses appropriate strategy. Set each Car's vector<Tyre*>. 
 };
 
 #endif

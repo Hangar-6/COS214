@@ -5,12 +5,18 @@
 
 enum Session {PRACTICE, QUALIFYING, RACE};
 
+struct FinishPosition {
+    int car1;
+    int car2;
+};
+
+
 class RaceSession {
     protected:
         RaceSession* next;
 
     public:
-        virtual int runSession(Session session, Team team) = 0;
+        virtual FinishPosition runSession(Team* team) = 0;        // simulate running of session
 };
 
 #endif

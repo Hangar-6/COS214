@@ -6,7 +6,7 @@
 
 class Logistics {
     protected:
-        Logistics* next;
+        Logistics* next;        // used for chain of responsibility
 
     public:
         virtual void transport(RaceWeekend* race, Container* container) = 0;

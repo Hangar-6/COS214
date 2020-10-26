@@ -20,14 +20,14 @@ class Engineering {
         vector<Component*> components;
 
     public:
-        Engineering();
-        virtual ~Engineering();
-        vector<Component*> getComponents();
-        void upgrade(TestResult result);
-        void buildCars(Car* car1, Car* car2);
-        void dissasemble(Car* car1, Car* car2);
-        virtual void buildComponents() = 0;
-        void service(Car* car1, Car* car2);
+        Engineering();                      // creates Departments
+        virtual ~Engineering();             // deletes departments and components
+        vector<Component*> getComponents();     
+        void upgrade(TestResult result);       // creates new Component with new performance value if result is UPGRADE
+        void buildCars(Car* car1, Car* car2);   // clones components and adds them to the cars
+        void dissasemble(Car* car1, Car* car2);     // clears vector<Component*> of cars
+        virtual void buildComponents() = 0;     // uses departments to create components and puhes into vector<Component*>
+        void service(Car* car1, Car* car2);     // service both cars
 };
 
 #endif

@@ -12,8 +12,8 @@ class Testing {
         Testing* next;
 
     public:
-        virtual void test(Engineering* engineering, TestType type) = 0;
-        virtual void notify(Engineering* engineering, TestResult result) = 0;
+        virtual void test(Engineering* engineering, TestType type) = 0;     // simulate a test using chain of responsibility
+        virtual void notify(Engineering* engineering, TestResult result) = 0;       // notifies enginneering of result
 };
 
 #endif

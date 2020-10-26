@@ -8,7 +8,7 @@ class Storage {
         Container* container;
 
     public:
-        Storage(Container* _container);
+        Storage(Container* _container);     // stores a Container with Equipment of type CAR, GARAGE or CATERING
         Container* getContainer();
 };
 

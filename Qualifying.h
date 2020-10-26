@@ -5,7 +5,7 @@
 
 class Qualifying : public RaceSession {
     public:
-        int runSession(Session session);
+        FinishPosition runSession(Team* team);      // each car sets a lap to determine race start positions
 };
 
 #endif

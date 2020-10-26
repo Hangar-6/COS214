@@ -5,7 +5,7 @@
 
 class Ship : public Logistics {
     public:
-        void transport(RaceWeekend* race);
+        void transport(RaceWeekend* race, Container* container);        // Ship used if LocationType is NONEUROPEAN
 };
 
 #endif
