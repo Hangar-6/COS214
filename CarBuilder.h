@@ -5,7 +5,11 @@
 #include "BaseCar.h"
 
 class CarBuilder : public Builder {
+    private:
+        Car* car;
+
     public:
+        ~CarBuilder();
         void build();
         Car* getCar();
 };

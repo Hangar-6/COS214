@@ -3,6 +3,7 @@
 
 class Builder {
     public:
+        virtual ~Builder();
         virtual void build() = 0;
 };
 

@@ -3,6 +3,7 @@
 
 using namespace std;
 
+#include "Director.h"
 #include "CurrentEngineering.h"
 #include "NextEngineering.h"
 #include "Car.h"
@@ -11,6 +12,16 @@ using namespace std;
 #include "Testing.h"
 #include "BaseCar.h"
 #include <string>
+
+struct TeamItems {
+    Car* car1;
+    Car* car2;
+    CurrentEngineering* current;
+    NextEngineering* next;
+    Strategist* strategist;
+    Logistics* logistics;
+    Testing* testing;
+};
 
 struct Cars {
     Car* car1;
@@ -43,7 +54,7 @@ class Team {
         Team();
         ~Team();
         void addPoints(int d1Points, int d2Points);
-        void runTest(Testing* testing, TestType type);
+        void runTest(TestType type);
         Cars getCars();
         Engineers getEngineers();
 };

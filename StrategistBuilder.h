@@ -5,7 +5,11 @@
 #include "Strategist.h"
 
 class StrategistBuilder : public Builder {
+    private:
+        Strategist* strategist;
+
     public:
+        ~StrategistBuilder();
         void build();
         Strategist* getStrategist();
 };
