@@ -1,27 +1,13 @@
-//
-// Created by user-pc on 2020/10/17.
-//
+#ifndef ENGINE_H    
+#define ENGINE_H
 
-#ifndef COS214_ENGINE_H
-#define COS214_ENGINE_H
+#include "Component.h"
 
-#include "RacecarDecorator.h"
-
-class Engine : public RacecarDecorator {
-public:
-  const string type;
-  int power;
-
-private:
-  Engine();
-
-  //Unique Methods
-  int getPower();
-  void setPower(int power);
-
-  //Implementing virtual functions
-  string getType();
+class Engine : public Component {
+    public:
+        Engine(int _performance);
+        void add(Car* component);
+        Car* clone();
 };
 
-
-#endif //COS214_ENGINE_H
+#endif

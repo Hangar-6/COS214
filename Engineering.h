@@ -1,28 +1,33 @@
-//
-// Created by Luca Azmanov on 2020/10/17.
-//
+#ifndef ENGINEERING_H
+#define ENGINEERING_H
 
-#ifndef COS214_ENGINEERING_H
-#define COS214_ENGINEERING_H
-#include "EngineDep.h"
-#include "AeroDynamicsDep.h"
-#include "ElectronicsDep.h"
-#include "ChassisDep.h"
+#include "AerodynamicsDepartment.h"
+#include "ChassisDepartment.h"
+#include "ElectronicsDepartment.h"
+#include "EngineDepartment.h"
+#include "Testing.h"
+#include "Car.h"
+#include <vector>
 
 class Engineering {
+    protected:
+        int windTunnelRuns; 
+        AerodynamicsDepartment* aeroDep;
+        ChassisDepartment* chassisDep;
+        ElectronicsDepartment electronicsDep;
+        EngineDepartment* engineDep;
 
-private:
-  EngineDep* myEngineDepartment;
-  AerodynamicsDep* myAeroDynamicsDep;
-  ElectronicsDep* myElectronicsDep;
-  ChassisDep* myChassisDep;
+        vector<Component*> components;
 
-public:
-  Engineering(EngineDep* engine,AerodynamicsDep* aeroDynamic,ElectronicsDep* electronic,ChassisDep* chassis);
-  virtual void AssembleCar()=0;
-
-
+    public:
+        Engineering();                      // creates Departments
+        virtual ~Engineering();             // deletes departments and components
+        vector<Component*> getComponents();     
+        void upgrade(TestResult result);       // creates new Component with new performance value if result is UPGRADE
+        void buildCars(Car* car1, Car* car2);   // clones components and adds them to the cars
+        void dissasemble(Car* car1, Car* car2);     // clears vector<Component*> of cars
+        virtual void buildComponents() = 0;     // uses departments to create components and puhes into vector<Component*>
+        void service(Car* car1, Car* car2);     // service both cars
 };
 
-
-#endif //COS214_ENGINEERING_H
+#endif

@@ -5,8 +5,11 @@
 #include "Electronics.h"
 
 class ElectronicsDepartment : public EngineeringDepartment {
-    public:
-        Component* produce(int performance);
+public:
+    ElectronicsDepartment();
+    Component* produce(int performance);
+    void upgrade(Component* Comp);
+    void downgrade(Component* Comp);
 };
 
 #endif

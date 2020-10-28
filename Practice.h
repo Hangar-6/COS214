@@ -1,19 +1,11 @@
 #ifndef PRACTICE_H
 #define PRACTICE_H
 
-#include "WeekendFactory.h"
-#include <string>
-#include <stdlib.h>
-#include <iostream>
-#include <sstream>
+#include "RaceSession.h"
 
-class Practice: public WeekendFactory {
-
-public:
-    Practice();
-    ~Practice();
-    void start();
-    void end();
+class Practice : public RaceSession {
+    public:
+        FinishPosition runSession(Team* team);    // simulate running of session by running a PracticeTest
 };
-//ConcreteCreator
+
 #endif

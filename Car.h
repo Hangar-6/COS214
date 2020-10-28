@@ -1,24 +1,15 @@
-//
-// Created by user-pc on 2020/10/18.
-//
+#ifndef CAR_H
+#define CAR_H
 
-#ifndef COS214_CAR_H
-#define COS214_CAR_H
-#include "RacecarDecorator.h"
-#include <string>
+using namespace std;
 
 class Car {
-  private:
-    RacecarDecorator **myDecorators;
-    std::string name;
+    protected:
+        int performance;
 
-  public:
-    Car(std::string name);
-    void add(Car*);
-    std::string getName();
-    virtual std::string getType()=0;
-
+    public:
+        virtual void add(Car* component) = 0;
+        virtual Car* clone() = 0;
 };
 
-
-#endif //COS214_CAR_H
+#endif

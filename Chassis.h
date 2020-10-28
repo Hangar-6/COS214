@@ -1,27 +1,13 @@
-//
-// Created by user-pc on 2020/10/17.
-//
+#ifndef CHASSIS_H   
+#define CHASSIS_H
 
-#ifndef COS214_CHASSIS_H
-#define COS214_CHASSIS_H
+#include "Component.h"
 
-#include "RacecarDecorator.h"
-
-class Chassis : public RacecarDecorator {
-public:
-  const string type;
-  int strength;
-
-private:
-  Chassis();
-
-  //Unique Methods
-  int getStrength();
-  void setStrength(int strength);
-
-  //Implementing virtual functions
-  string getType();
+class Chassis : public Component {
+    public:
+        Chassis(int _performance);
+        void add(Car* component);
+        Car* clone();
 };
 
-
-#endif //COS214_CHASSIS_H
+#endif

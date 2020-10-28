@@ -1,17 +1,19 @@
 #ifndef TESTING_H
 #define TESTING_H
-#include "RaceCar.h"
-using namespace std;
 
-class Testing{
+enum TestResult {NOCHANGE, UPGRADE, DOWNGRADE};
 
-private:
-    Racecar* TestCar;
-public: //Make all tests into one test function?
-    virtual void EngineTest() = 0;
-    virtual void AeroTest() = 0;
-    virtual void ElectronicTest() = 0;
-    virtual void ChasisTest() = 0;
+enum TestType {WINDTUNNEL, SIMULATION, PRACTICE};
+
+#include "Engineering.h"
+
+class Testing {
+    protected:
+        Testing* next;
+
+    public:
+        virtual void test(Engineering* engineering, TestType type) = 0;     // simulate a test using chain of responsibility
+        virtual void notify(Engineering* engineering, TestResult result) = 0;       // notifies enginneering of result
 };
 
 #endif

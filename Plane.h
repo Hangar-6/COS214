@@ -1,21 +1,11 @@
-//
-// Created by user-pc on 2020/10/17.
-//
+#ifndef PLANE_H
+#define PLANE_H
 
-#ifndef COS214_PLANE_H
-#define COS214_PLANE_H
-#include "Transport"
+#include "Logistics.h"
 
-
-class Plane:Transport {
-private:
-
-public:
-  Plane();
-  string getType();
-  void executeTransport();
-
+class Plane : public Logistics {
+    public:
+        void transport(RaceWeekend* race, Container* container);      // Plane used if EquipmentType = CAR
 };
 
-
-#endif //COS214_PLANE_H
+#endif

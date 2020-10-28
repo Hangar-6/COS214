@@ -1,18 +1,12 @@
 #ifndef SIMULATION_H
 #define SIMULATION_H
+
 #include "Testing.h"
-using namespace std;
 
-class Simulation : public Testing{
-
-private:
-
-public:
-    Simulation();
-    virtual void EngineTest();
-    virtual void AeroTest();
-    virtual void ElectronicTest();
-    virtual void ChasisTest();
+class Simulation : public Testing {
+    public:
+        void test(Engineering* engineering, TestType type);     // handles test of type SIMULATION
+        void notify(Engineering* engineering, TestResult result);
 };
 
 #endif

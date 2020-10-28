@@ -6,7 +6,10 @@
 
 class EngineDepartment : public EngineeringDepartment {
     public:
-        Component* produce();
+        EngineDepartment();
+        Component* produce(int performance);
+        void upgrade(Component* Comp);
+        void downgrade(Component* Comp);
 };
 
 #endif
