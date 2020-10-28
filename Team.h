@@ -11,6 +11,9 @@ using namespace std;
 #include "Logistics.h"
 #include "Testing.h"
 #include "BaseCar.h"
+#include "GarageEquipment.h"
+#include "CateringEquipment.h"
+#include "CarAdapter.h"
 #include <string>
 
 struct TeamItems {
@@ -50,6 +53,9 @@ class Team {
         Strategist* strategist; 
         Logistics* logistics;
 
+        Equipment* garage;
+        Equipment* catering;
+
     public:
         Team();
         ~Team();
@@ -57,6 +63,8 @@ class Team {
         void runTest(TestType type);
         Cars getCars();
         Engineers getEngineers();
+        void transport(EquipmentType type);
+        void test(TestType type, Engineering* engineering);
 };
 
 #endif
