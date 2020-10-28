@@ -1,9 +1,11 @@
-#ifndef LOCATION_H  
+#ifndef LOCATION_H
 #define LOCATION_H
 
 using namespace std;
 
 #include <string>
+#include <stdlib.h>
+#include <time.h>
 
 enum LocationType {EUROPEAN, NONEUROPEAN};
 
@@ -13,8 +15,9 @@ class Location {
         LocationType type;
 
     public:
-        Location(string _venue, LocationType _type);
+        Location(LocationType _type);
         LocationType getLocation();
+        string decideVenue();//randomiser for venue selection
         string getVenue();
 };
 
