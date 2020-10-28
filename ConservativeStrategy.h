@@ -3,11 +3,12 @@
 
 #include "TyreStrategy.h"
 
-// Concrete Strategy Class. 
+// Concrete Strategy Class.
 // Creates 1 soft tyre, 3 sets of medium tyres and 1 hard tyres.
 
 class ConservativeStrategy : public TyreStrategy {
     public:
+        ConservativeStrategy();
         vector<Tyre*> strategy();
 };
 

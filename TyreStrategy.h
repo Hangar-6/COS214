@@ -7,8 +7,8 @@ using namespace std;
 #include <vector>
 
 // Abstract startegy class
-// Pushes 5 sets of tyres into a vector and returns to Strategist 
-    
+// Pushes 5 sets of tyres into a vector and returns to Strategist
+
 class TyreStrategy {
     public:
         virtual vector<Tyre*> strategy() = 0;
