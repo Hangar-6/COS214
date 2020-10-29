@@ -8,8 +8,6 @@ class AerodynamicsDepartment : public EngineeringDepartment {
     public:
         AerodynamicsDepartment();
         Component* produce(int performance);
-        void upgrade(int IncreaseAmount);
-        void downgrade(int DecreaseAmount);
 };
 
 #endif

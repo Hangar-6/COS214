@@ -2,6 +2,13 @@
 
 EngineeringDepartment::EngineeringDepartment(){
     this->CurrentComponent = null;
+    cout<<"Engineering department has been created."<<endl;
+}
+
+EngineeringDepartment::~EngineeringDepartment(){
+    if (CurrentComponent != nullptr)
+        delete CurrentComponent;
+    cout<<"Engineering department has been demolished."<<endl;
 }
 
 Component * EngineeringDepartment::getComponent() {
