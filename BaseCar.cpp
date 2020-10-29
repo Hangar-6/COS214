@@ -1,6 +1,8 @@
 #include "BaseCar.h"
 
-BaseCar::BaseCar() : performance(0), Car(){}
+BaseCar::BaseCar() : Car() {
+    performance = 0;
+}
 
 
 void BaseCar::add(Car *component) {
