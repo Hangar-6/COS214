@@ -19,7 +19,7 @@ void Team::addPoints(int d1Points, int d2Points) {
 }
 
 void Team::runTest(TestType type) {
-    // test->test(current, type);
+    // testing->test(current, type);
 }
 
 Cars Team::getCars() {
