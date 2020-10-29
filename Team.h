@@ -3,7 +3,6 @@
 
 using namespace std;
 
-#include "Director.h"
 #include "CurrentEngineering.h"
 #include "NextEngineering.h"
 #include "Car.h"
@@ -15,16 +14,6 @@ using namespace std;
 #include "CateringEquipment.h"
 #include "CarAdapter.h"
 #include <string>
-
-struct TeamItems {
-    Car* car1;
-    Car* car2;
-    CurrentEngineering* current;
-    NextEngineering* next;
-    Strategist* strategist;
-    Logistics* logistics;
-    Testing* testing;
-};
 
 struct Cars {
     Car* car1;
@@ -43,9 +32,9 @@ class Team {
         int Driver1Points = 0;
         int Driver2Points = 0;
 
-        CurrentEngineering* current;
-        NextEngineering* next;
-        Testing* test;
+        Engineering* current;
+        Engineering* next;
+        Testing* testing;
 
         Car* car1;
         Car* car2;
@@ -57,7 +46,7 @@ class Team {
         Equipment* catering;
 
     public:
-        Team();
+        Team(string name);
         ~Team();
         void addPoints(int d1Points, int d2Points);
         void runTest(TestType type);
@@ -65,6 +54,12 @@ class Team {
         Engineers getEngineers();
         void transport(EquipmentType type);
         void test(TestType type, Engineering* engineering);
+        void setCar(Car* car);
+        void setEngineers(Engineering* current, Engineering* next);
+        void setStrategist(Strategist* strategist);
+        void setLogistics(Logistics* logistics);
+        void setEquipment(Equipment* garage, Equipment* catering);
+        void setTesting(Testing* testing);
 };
 
 #endif

@@ -1,21 +1,11 @@
 #include "Team.h"
 
-Team::Team() {
-    Director director;
-    TeamItems items = director.buildTeam();
-    car1 = items.car1;
-    car2 = items.car2;
-    current = items.current;
-    next = items.next;
-    strategist = items.strategist;
-    logistics = items.logistics;
-    test = items.testing;
-}
+Team::Team(string name) : teamName(name) {}
 
 Team::~Team() {
     delete current;
     delete next;
-    delete test;
+    delete testing;
     delete car1;
     delete car2;
     delete strategist; 
@@ -29,7 +19,7 @@ void Team::addPoints(int d1Points, int d2Points) {
 }
 
 void Team::runTest(TestType type) {
-    test->test(current, type);
+    // test->test(current, type);
 }
 
 Cars Team::getCars() {
@@ -40,4 +30,31 @@ Cars Team::getCars() {
 Engineers Team::getEngineers() {
     Engineers engineers = {current, next};
     return engineers;
+}
+
+void Team::setCar(Car* car) {
+    car1 = car;
+    car2 = car->clone();
+}
+
+void Team::setEngineers(Engineering* _current, Engineering* _next) {
+    current = _current;
+    next = _next;
+}
+
+void Team::setStrategist(Strategist* _strategist) {
+    strategist = _strategist;
+}
+
+void Team::setLogistics(Logistics* _logistics) {
+    logistics = _logistics;
+}
+
+void Team::setEquipment(Equipment* _garage, Equipment* _catering) {
+    garage = _garage;
+    catering = _catering;
+}
+
+void Team::setTesting(Testing* _testing) {
+    testing = _testing;
 }

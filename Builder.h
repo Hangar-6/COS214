@@ -1,10 +1,12 @@
 #ifndef BUILDER_H
 #define BUILDER_H
 
+#include "Team.h"
+
 class Builder {
     public:
         virtual ~Builder();
-        virtual void build() = 0;
+        virtual Team* build(string name) = 0;
 };
 
 #endif
