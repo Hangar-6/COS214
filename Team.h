@@ -39,7 +39,7 @@ class Team {
         Car* car1;
         Car* car2;
 
-        Strategist* strategist; 
+        Strategist* strategist;
         Logistics* logistics;
 
         Equipment* garage;
@@ -52,6 +52,7 @@ class Team {
         void runTest(TestType type);
         Cars getCars();
         Engineers getEngineers();
+        string getTeamName();
         void transport(EquipmentType type);
         void test(TestType type, Engineering* engineering);
         void setCar(Car* car);

@@ -17,7 +17,6 @@ class Location {
     public:
         Location(LocationType _type, sting venue);
         LocationType getLocation();
-        string decideVenue();//randomiser for venue selection
         string getVenue();
 };
 

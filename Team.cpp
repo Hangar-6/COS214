@@ -8,7 +8,7 @@ Team::~Team() {
     delete testing;
     delete car1;
     delete car2;
-    delete strategist; 
+    delete strategist;
     delete logistics;
 }
 
@@ -30,6 +30,10 @@ Cars Team::getCars() {
 Engineers Team::getEngineers() {
     Engineers engineers = {current, next};
     return engineers;
+}
+
+string Team::getTeamName(){
+    return teamName;
 }
 
 void Team::setCar(Car* car) {
