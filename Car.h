@@ -8,6 +8,7 @@ class Car {
         int performance;
 
     public:
+        Car();
         virtual void add(Car* component) = 0;
         virtual Car* clone() = 0;
 };
