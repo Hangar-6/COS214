@@ -1,26 +1,16 @@
 #include "Component.h"
 
-Component::Component() {
-
-}
-
-Car * Component::clone() {
-
-}
-
-void Component::add(Car *component) {
-
-}
+Component::Component() {}
 
 int Component::getMaxPerformance() {
-
+    return maxPerformance;
 }
 
 int Component::getPerformance() {
-
+    return performance;
 }
 
 void Component::setPerformance(int perf) {
-
+    performance = perf;
 }
 
