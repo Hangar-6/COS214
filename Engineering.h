@@ -11,7 +11,7 @@
 
 class Engineering {
     protected:
-        int windTunnelRuns; 
+        int windTunnelRuns;
         AerodynamicsDepartment* aeroDep;
         ChassisDepartment* chassisDep;
         ElectronicsDepartment electronicsDep;
@@ -22,7 +22,7 @@ class Engineering {
     public:
         Engineering();                      // creates Departments
         virtual ~Engineering();             // deletes departments and components
-        vector<Component*> getComponents();     
+        vector<Component*> getComponents();
         void upgrade(TestResult result);       // creates new Component with new performance value if result is UPGRADE
         void buildCars(Car* car1, Car* car2);   // clones components and adds them to the cars
         void dissasemble(Car* car1, Car* car2);     // clears vector<Component*> of cars
