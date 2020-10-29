@@ -1,6 +1,9 @@
 #include "Engineering.h"
 
 Engineering::Engineering(){
+    aeroDep = new AerodynamicsDepartment();
+    //...
+
 }                      // creates Departments
 
 Engineering::~Engineering(){
@@ -8,10 +11,10 @@ Engineering::~Engineering(){
 }             // deletes departments and components
 
 vector<Component*> Engineering::getComponents(){
-
+    return components;
 }
 
-void Engineering::upgrade(TestResult result){
+void Engineering::upgrade(TestResult result){ //result is based off enum and make decision
 
 }       // creates new Component with new performance value if result is UPGRADE
 

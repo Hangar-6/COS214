@@ -13,6 +13,7 @@ class BaseCar : public Car {
     
     public:
         BaseCar();
+        virtual ~BaseCar(); //IMPLEMENT
         void add(Car* component);
         Car* clone();
         void setTyres(vector<Tyre*> _tyres);

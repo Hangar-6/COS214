@@ -5,11 +5,12 @@
 
 class Component : public Car {
     protected:
-        Car* car;
+        Car* baseCar;
         int maxPerformance;
         
     public:
         Component();
+        virtual ~Component(); //IMPLEMENT
         virtual void add(Car* component) = 0;
         virtual Car* clone() = 0;
         void setPerformance(int perf);
