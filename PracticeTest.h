@@ -5,8 +5,9 @@
 
 class PracticeTest : public Testing {
     public:
+        PracticeTest();
         void test(Engineering* engineering, TestType type);     // handles test of type PRACTICE
-        void notify(Engineering* engineering, TestResult result);
+        //void notify(Engineering* engineering, TestResult result);
 };
 
 #endif

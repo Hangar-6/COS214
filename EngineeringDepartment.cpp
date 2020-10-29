@@ -1,4 +1,5 @@
 #include "EngineDepartment.h"
+#include <iostream>
 
 EngineeringDepartment::EngineeringDepartment(){
     this->CurrentComponent = null;
@@ -18,6 +19,3 @@ Component * EngineeringDepartment::getComponent() {
 void EngineeringDepartment::setComponent(Component* NewComp){
     this->CurrentComponent = NewComp;
 }
-/*void EngineeringDepartment::setComponent(Component * NewComp) {
-    this->CurrentComponent = NewComp;           Uncomment if needed
-}*/

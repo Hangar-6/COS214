@@ -1,4 +1,5 @@
 #include "AerodynamicsDepartment.h"
+#include <iostream>
 
 AerodynamicsDepartment::AerodynamicsDepartment(){
     Aerodynamics* NewAero = new Aerodynamics(0);
