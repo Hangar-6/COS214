@@ -36,6 +36,10 @@ string Team::getTeamName(){
     return teamName;
 }
 
+void Team::setConstructorPoints(int p){
+    ConstructorPoints = p;
+}
+
 void Team::setCar(Car* car) {
     car1 = car;
     car2 = car->clone();
