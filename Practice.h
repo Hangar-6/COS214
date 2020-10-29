@@ -5,6 +5,7 @@
 
 class Practice : public RaceSession {
     public:
+        Practice();
         FinishPosition runSession(Team* team);    // simulate running of session by running a PracticeTest
 };
 

@@ -2,9 +2,9 @@
 
 using namespace std;
 
-Location::Location(LocationType _type){
+Location::Location(LocationType _type, string _venue){
   this->type = _type;
-  this->venue = decideVenue(type);
+  this->venue = _venue;
 }
 
 LocationType Location::getLocation(){
@@ -13,16 +13,4 @@ LocationType Location::getLocation(){
 
 string Location::getVenue(){
   return this->venue;
-}
-
-string Location::decideVenue(LocationType l){
-  srand (time(NULL));
-  if(l==NONEUROPEAN){
-    string[] list = new string[]{"Algarve International Circuit","Autodromo Internazionale Enzo e Dino Ferrari","Autodromo Nazionale Monza","Circuit de Barcelona-Catalunya","Circuit de Spa-Francorchamps","Red Bull Ring","Silverstone"};
-    return list[rand() % 7];
-  }
-  else{
-    string[] list = new string[]{"Bahrain International Circuit","Istanbul Park","Yas Marina Circuit"};
-    return list[rand() % 3];
-  }
 }

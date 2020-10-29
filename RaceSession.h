@@ -2,6 +2,8 @@
 #define RACESESSION_H
 
 #include "Team.h"
+#include <stdlib.h>
+#include <time.h>
 
 enum Session {PRACTICE, QUALIFYING, RACE};
 

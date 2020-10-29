@@ -9,6 +9,7 @@ class Tyre {
         int durability;
 
     public:
+        void setDurability(int d);
         virtual Tyre* clone() = 0;
 };
 
