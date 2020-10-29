@@ -1,0 +1,11 @@
+memento
+template method
+factory method
+prototype
+strategy
+decorator
+observer
+adapter
+chain of responsibility
+builder
+facade
