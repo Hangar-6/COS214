@@ -55,6 +55,7 @@ class Team {
         string getTeamName();
         void transport(EquipmentType type);
         void test(TestType type, Engineering* engineering);
+        void setConstructorPoints(int p);
         void setCar(Car* car);
         void setEngineers(Engineering* current, Engineering* next);
         void setStrategist(Strategist* strategist);

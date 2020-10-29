@@ -11,7 +11,7 @@ RaceWeekend::RaceWeekend(Location* _location){
 
 RaceWeekend::~RaceWeekend(){}
 
-int RaceWeekend::determinePoints(FinishPosition positions){
+int RaceWeekend::determineTeamPoints(FinishPosition positions){
     int total = 0;
     switch (positions.car1) {
       case 1: total+=25;
@@ -38,6 +38,35 @@ int RaceWeekend::determinePoints(FinishPosition positions){
               break;
     }
     switch (positions.car2) {
+      case 1: total+=25;
+              break;
+      case 2: total+=18;
+              break;
+      case 3: total+=15;
+              break;
+      case 4: total+=12;
+              break;
+      case 5: total+=10;
+              break;
+      case 6: total+=8;
+              break;
+      case 7: total+=6;
+              break;
+      case 8: total+=4;
+              break;
+      case 9: total+=2;
+              break;
+      case 10: total+=1;
+              break;
+      defualt: total+=0;
+              break;
+    }
+    return total;
+}
+
+int RaceWeekend::determineDriveroints(int position){
+    int total = 0;
+    switch (position) {
       case 1: total+=25;
               break;
       case 2: total+=18;
@@ -146,4 +175,12 @@ void RaceWeekend::runSessions(Team* team){
     //Example output
     cout << "With the final race completed, car 1 finished at position " << r.car1 <<
     " and car 2 finshed at position " << r.car2 << endl;
+
+    //Finally, determine points for team and drivers
+    int d1 = determineDriveroints(r.car1);  //car1
+    int d2 = determineDriveroints(r.car2);  //car2
+    int t = determineTeamPoints(r); //team
+    team->addPoints(d1,d2);
+    team->setConstructorPoints(t);
+
 }
