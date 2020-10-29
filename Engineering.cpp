@@ -19,7 +19,7 @@ void Engineering::buildCars(Car* car1, Car* car2){
 
 }   // clones components and adds them to the cars
 
-void Engineering::dissasemble(Car* car1, Car* car2){
+void Engineering::disassemble(Car* car1, Car* car2){
 
 }     // clears vector<Component*> of cars
 

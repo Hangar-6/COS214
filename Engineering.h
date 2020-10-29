@@ -25,7 +25,7 @@ class Engineering {
         vector<Component*> getComponents();
         void upgrade(TestResult result);       // creates new Component with new performance value if result is UPGRADE
         void buildCars(Car* car1, Car* car2);   // clones components and adds them to the cars
-        void dissasemble(Car* car1, Car* car2);     // clears vector<Component*> of cars
+        void disassemble(Car* car1, Car* car2);     // clears vector<Component*> of cars
         virtual void buildComponents() = 0;     // uses departments to create components and puhes into vector<Component*>
         void service(Car* car1, Car* car2);     // service both cars
 };
