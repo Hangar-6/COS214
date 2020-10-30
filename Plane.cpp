@@ -31,6 +31,7 @@ void Plane::transport(RaceWeekend *race, Container *container) {
         return;
     }
     next->transport(race,container);
+    return;
 
 }
 

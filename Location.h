@@ -15,7 +15,7 @@ class Location {
         LocationType type;
 
     public:
-        Location(LocationType _type, sting venue);
+        Location(LocationType _type, string venue);
         LocationType getLocation();
         string getVenue();
 };

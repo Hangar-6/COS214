@@ -30,7 +30,7 @@ void Truck::transport(RaceWeekend *race, Container *container) {
         return;
     }
         next->transport(race,container);
-
+        return;
 }
 
 string Truck::getType() {

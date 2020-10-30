@@ -27,6 +27,7 @@ void Ship::transport(RaceWeekend *race, Container *container) {
         }
 
         next->transport(race,container);
+        return;
     }
 
     cout<<"The ship transports the equipment as this is a NON European race!"<<endl;
