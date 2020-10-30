@@ -58,3 +58,11 @@ void Team::setEquipment(Equipment* _garage, Equipment* _catering) {
 void Team::setTesting(Testing* _testing) {
     testing = _testing;
 }
+
+void Team::racePreparations() {
+    current->buildCars(car1, car2);
+}
+
+void Team::raceEnd() {
+    current->disassemble(car1, car2);
+}

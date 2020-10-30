@@ -60,6 +60,8 @@ class Team {
         void setLogistics(Logistics* logistics);
         void setEquipment(Equipment* garage, Equipment* catering);
         void setTesting(Testing* testing);
+        void racePreparations();
+        void raceEnd();
 };
 
 #endif
