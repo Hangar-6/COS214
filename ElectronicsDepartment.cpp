@@ -3,8 +3,8 @@
 
 using namespace std;
 
-ElectronicsDepartment::ElectronicsDepartment(){
-    Electronics* NewElectronic = new Electronics (0);
+ElectronicsDepartment::ElectronicsDepartment(BaseCar* baseCar, int perf){
+    Electronics* NewElectronic = new Electronics (baseCar, perf);
     this->setComponent(NewElectronic);
     cout<<"New eletronics are being prepared."<<endl;
 }

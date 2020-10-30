@@ -1,6 +1,7 @@
 #include "Engine.h"
 
-Engine::Engine(int _performance) {
+Engine::Engine(BaseCar* car, int _performance) {
+    baseCar=car;
     performance = _performance;
     maxPerformance = 30;
 }
@@ -10,8 +11,7 @@ void Engine::add(Car *component) {
 }
 
 Car * Engine::clone() {
-    Engine* copy = new Engine(baseCar);
+    Engine* copy = new Engine(baseCar, performance);
     copy->maxPerformance = maxPerformance;
-    copy->performance = performance;
     return copy;
 }

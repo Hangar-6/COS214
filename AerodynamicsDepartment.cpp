@@ -1,8 +1,8 @@
 #include "AerodynamicsDepartment.h"
 #include <iostream>
 
-AerodynamicsDepartment::AerodynamicsDepartment(){
-    Aerodynamics* NewAero = new Aerodynamics(0);
+AerodynamicsDepartment::AerodynamicsDepartment(BaseCar* baseCar, int perf){
+    Aerodynamics* NewAero = new Aerodynamics(baseCar, perf);
     this->setComponent(NewAero);
     cout<<"New engine is being prepared."<<endl;
 }
