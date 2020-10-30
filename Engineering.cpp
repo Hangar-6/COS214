@@ -69,5 +69,5 @@ void Engineering::disassemble(BaseCar* car1, BaseCar* car2){
 }     // clears vector<Component*> of cars
 
 void Engineering::service(BaseCar* car1, BaseCar* car2){
-
+    cout<<"Both cars are currently being serviced, all parts are being tested and repaired."<<endl;
 }     // service both cars
