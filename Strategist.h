@@ -4,6 +4,8 @@
 #include "Car.h"
 #include "RaceWeekend.h"
 #include "AggressiveStrategy.h"
+#include "BalancedStrategy.h"
+#include "ConservativeStrategy.h"
 
 class Strategist {
     public:
