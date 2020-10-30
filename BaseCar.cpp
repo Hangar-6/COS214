@@ -2,7 +2,6 @@
 
 BaseCar::BaseCar() : Car() {
     performance = 0;
-    tyreCount=0;
 }
 
 BaseCar::~BaseCar(){
