@@ -18,6 +18,8 @@ class BaseCar : public Car {
         void add(Car* component);
         Car* clone();
         void setTyres(vector<Tyre*> _tyres);
+        void setComponents(vector<Component*> _components);
+        void clearComponents();
 };
 
 #endif

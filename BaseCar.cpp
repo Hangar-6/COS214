@@ -43,3 +43,12 @@ void BaseCar::setTyres(vector<Tyre *> _tyres) {
     //set tyres vector
     tyres = _tyres;
 }
+
+void BaseCar::setComponents(vector<Component *> _components) {
+    //set components vector
+    components=_components;
+}
+
+void BaseCar::clearComponents() {
+    components.clear();
+}
