@@ -19,34 +19,24 @@ using namespace std;
 class Engineering {
     protected:
         int windTunnelRuns;
+        vector<Component*> components;
 
         AerodynamicsDepartment* aeroDep;
         ChassisDepartment* chassisDep;
         ElectronicsDepartment* electronicsDep;
         EngineDepartment* engineDep;
-
-        AerodynamicsDepartment* aeroDep2;
-        ChassisDepartment* chassisDep2;
-        ElectronicsDepartment* electronicsDep2;
-        EngineDepartment* engineDep2;
-
-        BaseCar* baseCar1;
-        BaseCar* baseCar2;
-
-        vector<Component*> components1;
-        vector<Component*> components2;
-
-        int aeroP, chasP, electronicsP, engineP; //Performance
-
+        
     public:
-        Engineering(BaseCar *car1, BaseCar *car2);                      // creates Departments
-        virtual ~Engineering();             // deletes departments and components
+        Engineering();                      // creates Departments
+        virtual ~Engineering();             // deletes departments and and clears components
         vector<Component*> getComponents();
-        void upgrade(TestResult result);       // creates new Component with new performance value if result is UPGRADE
-        void buildCars();   // clones components and adds them to the cars
-        void disassemble(BaseCar* car1, BaseCar* car2);     // clears vector<Component*> of cars
-        virtual void buildComponents() = 0;     // uses departments to create components and puhes into vector<Component*>
-        void service(BaseCar* car1, BaseCar* car2);     // service both cars
+        void upgrade(TestResult result, ComponentType component);       // creates new Component with new performance value if result is UPGRADE
+        void buildCars(Car* car1, Car* car2);   // clones components and adds them to the cars
+        void disassemble(Car* car1, Car* car2);     // calls clearComponents() of each car
+        virtual void buildComponents() = 0;     // uses departments to create components and pushes into vector<Component*>
+        void service(Car* car1, Car* car2);     // service both cars
+        int getWindTunnelRuns();
+        void setWindTunnelRuns(int runs);
 };
 
 #endif

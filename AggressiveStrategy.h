@@ -9,8 +9,8 @@
 
 class AggressiveStrategy : public TyreStrategy {
     public:
-        AggressiveStrategy();
-        vector<Tyre*> strategy();
+        vector<Tyre*>setTyres();
+
 };
 
 #endif

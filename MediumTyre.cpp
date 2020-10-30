@@ -2,11 +2,10 @@
 
 using namespace std;
 
-MediumTyre::MediumTyre(){
-  setDurability(20);
+MediumTyre::MediumTyre() : Tyre() {
+  	durability = 20;
 }
 
-Tyre* MediumTyre::clone(){
-  Tyre* t = new MediumTyre();
-  return t;
+Tyre* MediumTyre::clone() {
+	return new MediumTyre();
 }

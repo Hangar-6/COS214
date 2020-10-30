@@ -2,14 +2,18 @@
 
 using namespace std;
 
-RaceWeekend::RaceWeekend(Location* _location){
+RaceWeekend::RaceWeekend(Location* _location) {
   this->location = _location;
-  this->race = new Race();
   this->practice = new Practice();
+  this->race = new Race();
   this->qualifying = new Qualifying();
 }
 
-RaceWeekend::~RaceWeekend(){}
+RaceWeekend::~RaceWeekend() {
+	delete race;
+	delete qualifying;
+	delete practice;
+}
 
 int RaceWeekend::determineTeamPoints(FinishPosition positions){
     int total = 0;
@@ -34,7 +38,7 @@ int RaceWeekend::determineTeamPoints(FinishPosition positions){
               break;
       case 10: total+=1;
               break;
-      defualt: total+=0;
+      default: total+=0;
               break;
     }
     switch (positions.car2) {
@@ -58,13 +62,13 @@ int RaceWeekend::determineTeamPoints(FinishPosition positions){
               break;
       case 10: total+=1;
               break;
-      defualt: total+=0;
+      default: total+=0;
               break;
     }
     return total;
 }
 
-int RaceWeekend::determineDriveroints(int position){
+int RaceWeekend::determineDriverPoints(int position) {
     int total = 0;
     switch (position) {
       case 1: total+=25;
@@ -96,7 +100,7 @@ int RaceWeekend::determineDriveroints(int position){
 void RaceWeekend::runSessions(Team* team){
     //Example output for start of race weekend
     cout << "Welcome to FORMULA 1 Grand Prix where " << team->getTeamName() << " will be racing, along with others, " <<
-    "here at " location->getVenue() << endl;
+    "here at " << location->getVenue() << endl;
 
     bool pole1 = false;     //pole for car 1 - true if pole position, else false
     bool pole2 = false;     //pole for car 2 - true if pole position, else false
@@ -177,14 +181,18 @@ void RaceWeekend::runSessions(Team* team){
     " and car 2 finshed at position " << r.car2 << endl;
 
     //Finally, determine points for team and drivers
-    int d1 = determineDriveroints(r.car1);  //car1
-    int d2 = determineDriveroints(r.car2);  //car2
+    int d1 = determineDriverPoints(r.car1);  //car1
+    int d2 = determineDriverPoints(r.car2);  //car2
     int t = determineTeamPoints(r); //team
     team->addPoints(d1,d2);
     team->setConstructorPoints(t);
 
 }
 
-Location *RaceWeekend::getLocation() {
+Location* RaceWeekend::getLocation() {
     return location;
+}
+
+RecommendedStrategy RaceWeekend::getStrategy() {
+	return strategy;
 }

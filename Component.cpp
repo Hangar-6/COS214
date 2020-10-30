@@ -1,14 +1,13 @@
 #include "Component.h"
 
-Component::Component() {}
-
-Component::~Component(){
-    //DEALLOCATE baseCar
-    delete baseCar;
+Component::Component(int perf = 0) {
+    performance = perf;
+    baseCar = nullptr;
 }
 
-int Component::getMaxPerformance() {
-    return maxPerformance;
+Component::~Component() {
+    // DEALLOCATE baseCar
+    // never delete baseCar, Team owns and deletes baseCar
 }
 
 int Component::getPerformance() {

@@ -1,17 +1,15 @@
 #include "Engine.h"
 
-Engine::Engine(BaseCar* car, int _performance) {
-    baseCar=car;
-    performance = _performance;
-    maxPerformance = 30;
-}
+Engine::Engine(int _performance = 0) : Component(_performance) {}
 
 void Engine::add(Car *component) {
     baseCar->add(component);
 }
 
 Car * Engine::clone() {
-    Engine* copy = new Engine(baseCar, performance);
-    copy->maxPerformance = maxPerformance;
-    return copy;
+    return new Engine(performance);;
+}
+
+ComponentType Engine::getType() {
+    return ENGINE;
 }

@@ -1,13 +1,11 @@
-
-#include "Equipment.h"
 #include "CarAdapter.h"
+
+CarAdapter::CarAdapter(Car *passedInCar) : Equipment() {
+    car = passedInCar;
+}
 
 EquipmentType CarAdapter::getType() {
     return CAR;
-}
-
-CarAdapter::CarAdapter(Car *passedInCar) {
-    car=passedInCar;
 }
 
 Car *CarAdapter::getCar() {

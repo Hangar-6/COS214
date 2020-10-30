@@ -2,15 +2,13 @@
 #define BASECAR_H
 
 #include "Car.h"
-#include "Component.h"
 #include "Tyre.h"
 #include <vector>
 
 class BaseCar : public Car {
     private:
-        vector<Component*> components;
+        vector<Car*> components;
         vector<Tyre*> tyres;
-        int componentCount;
     
     public:
         BaseCar();
@@ -18,7 +16,7 @@ class BaseCar : public Car {
         void add(Car* component);
         Car* clone();
         void setTyres(vector<Tyre*> _tyres);
-        void setComponents(vector<Component*> _components);
+        void setComponents(vector<Car*> _components);
         void clearComponents();
 };
 

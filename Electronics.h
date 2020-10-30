@@ -5,9 +5,10 @@
 
 class Electronics : public Component {
     public:
-        Electronics(BaseCar* car, int _performance);
+        Electronics(int _performance = 0);
         void add(Car* component);
         Car* clone();
+        ComponentType getType();
 };
 
 #endif

@@ -2,21 +2,14 @@
 
 using namespace std;
 
-AggressiveStrategy::AggressiveStrategy(){}
-
-vector<Tyre*> AggressiveStrategy::strategy(){
+vector<Tyre*> AggressiveStrategy::setTyres() {
     vector<Tyre*> tyres;
-    Tyres* temp;
-    for(int i=0;i<5;i++){
-        if(i<3){
-            temp = new SoftTyre();
-            tyres.push_back(temp);
-        }
-        else{
-            temp = new MediumTyre();
-            tyres.push_back(temp);
-        }
+    for(int i=0;i<5;i++) {
+        if(i<3)
+            tyres.push_back(new SoftTyre());
+        
+        else
+            tyres.push_back(new MediumTyre());
     }
-    temp = NULL;
     return tyres;
 }

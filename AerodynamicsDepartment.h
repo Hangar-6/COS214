@@ -6,8 +6,8 @@
 
 class AerodynamicsDepartment : public EngineeringDepartment {
     public:
-        AerodynamicsDepartment(BaseCar* baseCar, int perf);
-        Component* produce(int performance);
+        AerodynamicsDepartment();
+        Component* produce(int performance = 0);
 };
 
 #endif

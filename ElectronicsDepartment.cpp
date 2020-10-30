@@ -3,14 +3,12 @@
 
 using namespace std;
 
-ElectronicsDepartment::ElectronicsDepartment(BaseCar* baseCar, int perf){
-    Electronics* NewElectronic = new Electronics (baseCar, perf);
-    this->setComponent(NewElectronic);
-    cout<<"New eletronics are being prepared."<<endl;
+ElectronicsDepartment::ElectronicsDepartment() : EngineeringDepartment() {
+    component = new Electronics();
 }
-Component* ElectronicsDepartment::produce(int performance){
-    Component* MyElectronic = this->getComponent();
-    MyElectronic->setPerformance(performance);
-    this->setComponent(MyElectronic);
-    cout<<"Electronics have been produced with a technological performance of "<<performance<<"."<<endl;
+
+Component* ElectronicsDepartment::produce(int performance = 0){
+    component->setPerformance(performance);
+    cout<<"Electronics have been produced with a performance value of "<<performance<<endl;
+    return component;
 }

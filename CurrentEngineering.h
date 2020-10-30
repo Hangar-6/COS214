@@ -5,6 +5,7 @@
 
 class CurrentEngineering : public Engineering {
     public: 
+        CurrentEngineering();
         void buildComponents();
 };
 

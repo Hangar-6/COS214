@@ -7,7 +7,6 @@ class Simulation : public Testing {
     public:
         Simulation();
         void test(Engineering* engineering, TestType type);     // handles test of type SIMULATION
-        //void notify(Engineering* engineering, TestResult result);
 };
 
 #endif

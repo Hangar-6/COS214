@@ -2,11 +2,10 @@
 
 using namespace std;
 
-HardTyre::HardTyre(){
-  setDurability(30);
+HardTyre::HardTyre() : Tyre() {
+	durability = 30;
 }
 
 Tyre* HardTyre::clone(){
-  Tyre* t = new HardTyre();
-  return t;
+  	return new HardTyre();
 }

@@ -4,9 +4,7 @@
 enum EquipmentType {GARAGE, CATERING, CAR};
 
 class Equipment {
-
     public:
-        Equipment();
         virtual EquipmentType getType()=0;
 };
 

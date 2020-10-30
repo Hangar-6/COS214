@@ -1,17 +1,15 @@
 #include "Electronics.h"
 
-Electronics::Electronics(BaseCar* car, int _performance) {
-    baseCar=car;
-    performance = _performance;
-    maxPerformance = 10;
-}
+Electronics::Electronics(int _performance = 0) : Component(_performance) {}
 
 void Electronics::add(Car *component) {
     baseCar->add(component);
 }
 
 Car * Electronics::clone() {
-    Electronics* copy = new Electronics(baseCar, performance);
-    copy->maxPerformance = maxPerformance;
-    return copy;
+    return new Electronics(performance);;
+}
+
+ComponentType Electronics::getType() {
+    return ELECTRONICS;
 }

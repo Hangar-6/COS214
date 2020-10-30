@@ -5,6 +5,7 @@
 
 class NextEngineering : public Engineering {
     public:
+        NextEngineering();
         void buildComponents();
 };
 

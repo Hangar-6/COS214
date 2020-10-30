@@ -1,28 +1,23 @@
 #include "PracticeTest.h"
-#include <iostream>
-#include <vector>
 
 using namespace std;
 
-PracticeTest::PracticeTest() {
-    //TestType ThisTest = PRACTICE;
-}
+PracticeTest::PracticeTest() : Testing() {}
 
 void PracticeTest::test(Engineering* engineering, TestType type) {
-    TestType ThisTest = PRACTICE;
-    //if (type != "PRACTICE" || type != 2)
-    if (type != ThisTest)
-        this->next->test(engineering, type);
-    else{
-        TestResult PTResult;
-        PTResult = NOCHANGE;
+    // go through each component from components vector, use switch to check ComponentType
+    // randomise number betweeen 0 and 3 and cast random int to TestResult
+
+    if(type == PRACTICE) {
+        TestResult result;
+        result = NOCHANGE;
         vector<Component*> Components = engineering->getComponents();
         cout<<"Practice Test: Start..."<<endl;
         for (int i = 0; i < Components.size(); i++){
             if (Components.at(i)==Aerodynamics){
                 cout<<"Practice Test: Aerodynamics testing in progress..."<<endl;
                 if (Components.at(i)->getPerformance()-5 <= 0){
-                    PTResult = UPGRADE;
+                    result = UPGRADE;
                     cout<<"Practice Test: Aerodynamics failed..."<<endl;
                 }
                 else
@@ -31,7 +26,7 @@ void PracticeTest::test(Engineering* engineering, TestType type) {
             if (Components.at(i)==Electronics){
                 cout<<"Practice Test: Electronics testing in progress..."<<endl;
                 if (Components.at(i)->getPerformance()-5 <= 0){
-                    PTResult = UPGRADE;
+                    result = UPGRADE;
                     cout<<"Practice Test: Electronics failed..."<<endl;
                 }
                 else
@@ -40,7 +35,7 @@ void PracticeTest::test(Engineering* engineering, TestType type) {
             if (Components.at(i)==Engine){
                 cout<<"Practice Test: Engine testing in progress..."<<endl;
                 if (Components.at(i)->getPerformance()-5 <= 0){
-                    PTResult = UPGRADE;
+                    result = UPGRADE;
                     cout<<"Practice Test: Engine failed..."<<endl;
                 }
                     cout<<"Practice Test: Engine passed..."<<endl;
@@ -48,7 +43,7 @@ void PracticeTest::test(Engineering* engineering, TestType type) {
             if (Components.at(i)==Chassis){
                 cout<<"Practice Test: Chassis testing in progress..."<<endl;
                 if (Components.at(i)->getPerformance()-5 <= 0){
-                    PTResult = UPGRADE;
+                    result = UPGRADE;
                     cout<<"Practice Test: Chassis failed..."<<endl;
                 }
                 else
@@ -56,6 +51,9 @@ void PracticeTest::test(Engineering* engineering, TestType type) {
             }
         }
         cout<<"Practice Test: End"<<endl;
-        notify(engineering, PTResult);
+        notify(engineering, result);
     }
+        
+    else if(next)
+        next->test(engineering, type);
 }

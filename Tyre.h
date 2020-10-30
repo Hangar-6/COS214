@@ -5,7 +5,7 @@
 // 3 different dry tyre compounds: soft, medium. hard
 
 class Tyre {
-    private:
+    protected:
         int durability;
 
     public:

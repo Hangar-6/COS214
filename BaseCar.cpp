@@ -6,36 +6,21 @@ BaseCar::BaseCar() : Car() {
 
 BaseCar::~BaseCar(){
     //DEALLOCATE TYRES AND COMPONENTS
-    for(int i=0; i<components.size(); i++)
-    {
-        delete components[i];
-    }
-
-    for(int i=0; i<tyres.size(); i++)
-    {
-        delete tyres[i];
-    }
+    // vectors should already be empty by this point
+    // in case, still clear
+    components.clear();
+    tyres.clear();
 }
 
-
-void BaseCar::add(Car *component) {
+void BaseCar::add(Car* component) {
     //Add component to vector
     //Add performance to base performance
-    components[componentCount++] = component;
-    performance+=component->performance;
+    components.push_back(component);
+    performance += component->getPerformance();
 }
 
-Car * BaseCar::clone() {
-    BaseCar* copy = new BaseCar();
-    copy->setTyres(tyres);
-    for(int i=0; i<components.size(); i++)
-    {
-        copy->add(components[i]);
-    }
-    copy->performance = performance;
-    copy->componentCount = componentCount;
-
-    return copy;
+Car* BaseCar::clone() {
+    return new BaseCar();
 }
 
 void BaseCar::setTyres(vector<Tyre *> _tyres) {
@@ -43,11 +28,21 @@ void BaseCar::setTyres(vector<Tyre *> _tyres) {
     tyres = _tyres;
 }
 
-void BaseCar::setComponents(vector<Component *> _components) {
+void BaseCar::setComponents(vector<Car*> _components) {
     //set components vector
-    components=_components;
+    components = _components;
 }
 
 void BaseCar::clearComponents() {
+    // delete components and clear vector
+    vector<Car*>::iterator it;
+    for(it = components.begin(); it != components.end(); ++it)
+        delete *it;
     components.clear();
+
+    // delete tyres and clear vector
+    vector<Tyre*>::iterator itr;
+    for(itr = tyres.begin(); itr != tyres.end(); ++itr)
+        delete *itr;
+    tyres.clear();
 }

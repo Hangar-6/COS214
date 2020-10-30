@@ -3,7 +3,9 @@
 
 #include "Location.h"
 #include "Team.h"
-#include "RaceSession.h"
+#include "Practice.h"
+#include "Qualifying.h"
+#include "Race.h"
 
 enum RecommendedStrategy {AGGRESSIVE, BALANCED, CONSERVATIVE};
 
@@ -22,6 +24,7 @@ class RaceWeekend {
         int determineDriverPoints(int position);      // set driver's points to total points scored
         void runSessions(Team* team);                       // run practice, qualifying and race and determine points after race
         Location* getLocation();
+        RecommendedStrategy getStrategy();
 };
 
 #endif

@@ -5,6 +5,8 @@
 void Plane::transport(RaceWeekend *race, Container *container) {
     Location *raceLocation= race->getLocation();
 
+    // better to change to switch
+
     if(container->getEquipment()->getType()==CAR)
     {
         cout<<"The Car is transported by a plane with extreme caution!"<<endl;

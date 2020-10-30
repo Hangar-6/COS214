@@ -5,9 +5,10 @@
 
 class Chassis : public Component {
     public:
-        Chassis(BaseCar* car,int _performance);
+        Chassis(int _performance = 0);
         void add(Car* component);
         Car* clone();
+        ComponentType getType();
 };
 
 #endif

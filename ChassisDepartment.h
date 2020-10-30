@@ -6,8 +6,8 @@
 
 class ChassisDepartment : public EngineeringDepartment {
     public:
-        ChassisDepartment(BaseCar* baseCar, int perf);
-        Component* produce(int performance);
+        ChassisDepartment();
+        Component* produce(int performance = 0);
 };
 
 #endif

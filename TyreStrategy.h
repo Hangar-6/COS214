@@ -3,7 +3,9 @@
 
 using namespace std;
 
-#include "Tyre.h"
+#include "SoftTyre.h"
+#include "MediumTyre.h"
+#include "HardTyre.h"
 #include <vector>
 
 // Abstract startegy class
@@ -11,7 +13,8 @@ using namespace std;
     
 class TyreStrategy {
     public:
-        virtual vector<Tyre*> strategy() = 0;
+        vector<Tyre*> strategy();
+        virtual vector<Tyre*>setTyres() = 0;
 };
 
 #endif

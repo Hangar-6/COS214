@@ -1,21 +1,19 @@
 #include "EngineDepartment.h"
-#include <iostream>
 
-EngineeringDepartment::EngineeringDepartment(){
-    this->CurrentComponent = null;
+EngineeringDepartment::EngineeringDepartment() {
     cout<<"Engineering department has been created."<<endl;
 }
 
-EngineeringDepartment::~EngineeringDepartment(){
-    if (CurrentComponent != nullptr)
-        delete CurrentComponent;
-    cout<<"Engineering department has been demolished."<<endl;
+EngineeringDepartment::~EngineeringDepartment() {
+    if(component) 
+        delete component;
+    component = nullptr;
 }
 
 Component * EngineeringDepartment::getComponent() {
-    return this->CurrentComponent;
+    return component;
 }
 
-void EngineeringDepartment::setComponent(Component* NewComp){
-    this->CurrentComponent = NewComp;
+void EngineeringDepartment::setComponent(Component* NewComp) {
+    component = NewComp;
 }

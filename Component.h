@@ -2,21 +2,22 @@
 #define COMPONENT_H
 
 #include "Car.h"
-#include "BaseCar.h"
+
+enum ComponentType {AERODYNAMICS, CHASSIS, ELECTRONICS, ENGINE};
 
 class Component : public Car {
     protected:
         Car* baseCar;
-        int maxPerformance;
         
     public:
-        Component();
+        Component(int perf = 0);        // set performance in constructor, default 0
         virtual ~Component();
         virtual void add(Car* component) = 0;
         virtual Car* clone() = 0;
         void setPerformance(int perf);
         int getPerformance();
-        int getMaxPerformance();
+        void setBaseCar(Car* car);
+        virtual ComponentType getType() = 0;
 };
 
 #endif

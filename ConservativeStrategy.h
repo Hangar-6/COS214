@@ -8,7 +8,7 @@
 
 class ConservativeStrategy : public TyreStrategy {
     public:
-        vector<Tyre*> strategy();
+        vector<Tyre*>setTyres();
 };
 
 #endif

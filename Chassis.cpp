@@ -1,17 +1,15 @@
 #include "Chassis.h"
 
-Chassis::Chassis(BaseCar* car,int _performance) {
-    baseCar=car;
-    performance = _performance;
-    maxPerformance = 30;
-}
+Chassis::Chassis(int _performance = 0) : Component(_performance) {}
 
 void Chassis::add(Car *component) {
     baseCar->add(component);
 }
 
-Car * Chassis::clone() {
-    Chassis* copy = new Chassis(baseCar, performance);
-    copy->maxPerformance = maxPerformance;
-    return copy;
+Car* Chassis::clone() {
+    return new Chassis(performance);
+}
+
+ComponentType Chassis::getType() {
+    return CHASSIS;
 }

@@ -3,7 +3,9 @@
 #include <iostream>
 
 void Ship::transport(RaceWeekend *race, Container *container) {
-    Location *raceLocation= race->getLocation();
+    Location* raceLocation= race->getLocation();
+
+    // better to change to switch
 
     if(container->getEquipment()->getType()==CAR)
     {

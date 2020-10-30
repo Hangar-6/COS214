@@ -1,19 +1,17 @@
 #include "Aerodynamics.h"
 
-Aerodynamics::Aerodynamics(BaseCar *car, int _performance){
-    baseCar = car;
-    performance = _performance;
-    maxPerformance = 30;
-}
+Aerodynamics::Aerodynamics(int _performance = 0) : Component(_performance) {}
 
 void Aerodynamics::add(Car *component) {
     //ADD TO BASE
     baseCar->add(component);
 }
 
-Car * Aerodynamics::clone() {
-    Aerodynamics* copy = new Aerodynamics(baseCar, performance);
-    copy->maxPerformance = maxPerformance;
-    return copy;
+Car* Aerodynamics::clone() {
+    return new Aerodynamics(performance);
     //RETURN CLONE OF THIS COMPONENT
+}
+
+ComponentType Aerodynamics::getType() {
+    return AERODYNAMICS;
 }

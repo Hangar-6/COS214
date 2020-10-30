@@ -2,11 +2,10 @@
 
 using namespace std;
 
-SoftTyre::SoftTyre(){
-  setDurability(10);
+SoftTyre::SoftTyre() {
+    durability = 10;
 }
 
-Tyre* SoftTyre::clone(){
-  Tyre* t = new SoftTyre();
-  return t;
+Tyre* SoftTyre::clone() {
+    return new SoftTyre();
 }

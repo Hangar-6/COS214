@@ -13,10 +13,11 @@ class Testing {
 
     public:
         Testing();
+        virtual ~Testing();
         void addNext(Testing* NextTester);  //Adding pointer to next object in chain
         virtual void test(Engineering* engineering, TestType type) = 0;     // simulate a test using chain of responsibility
-        //virtual void notify(Engineering* engineering, TestResult result) = 0;       // notifies enginneering of result
-        void notify(Engineering* engineering, TestResult result);   //->>check with group
+        void notify(Engineering* engineering, TestResult result, ComponentType component);   // notifies engineering and calls update
+        // added a ComponentType to upgrade each component separately
 };
 
 #endif

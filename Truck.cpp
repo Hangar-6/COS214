@@ -5,6 +5,7 @@
 void Truck::transport(RaceWeekend *race, Container *container) {
     Location *raceLocation= race->getLocation();
 
+    // better to change this to a switch
     if(container->getEquipment()->getType()==CAR)
     {
         cout<<"Cars can not be transported by truck, extreme caution must be taken!!!"<<endl;
