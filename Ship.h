@@ -6,6 +6,7 @@
 class Ship : public Logistics {
     public:
         void transport(RaceWeekend* race, Container* container);        // Ship used if LocationType is NONEUROPEAN
+        virtual string getType();
 };
 
 #endif

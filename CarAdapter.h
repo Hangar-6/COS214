@@ -9,8 +9,9 @@ class CarAdapter : public Equipment {
         Car* car;
     
     public:
-        CarAdapter();   // set equipment type to CAR
+        CarAdapter(Car * passedInCar);   // set equipment type to CAR
         Car* getCar();
+        virtual EquipmentType getType();
 };
 
 #endif

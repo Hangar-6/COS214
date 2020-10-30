@@ -4,12 +4,10 @@
 enum EquipmentType {GARAGE, CATERING, CAR};
 
 class Equipment {
-    protected:
-        EquipmentType type;
 
     public:
-        Equipment(EquipmentType _type);
-        EquipmentType getType();
+        Equipment();
+        virtual EquipmentType getType()=0;
 };
 
 #endif

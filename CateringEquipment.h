@@ -6,6 +6,7 @@
 class CateringEquipment : public Equipment {
     public:
         CateringEquipment();    // set type to CATERING
+        virtual EquipmentType getType();
 };
 
 #endif

@@ -184,3 +184,7 @@ void RaceWeekend::runSessions(Team* team){
     team->setConstructorPoints(t);
 
 }
+
+Location *RaceWeekend::getLocation() {
+    return location;
+}
