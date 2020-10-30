@@ -10,7 +10,8 @@ class Component : public Car {
         
     public:
         Component();
-        virtual ~Component(); //IMPLEMENT
+        Component(Car* _baseCar);
+        virtual ~Component();
         virtual void add(Car* component) = 0;
         virtual Car* clone() = 0;
         void setPerformance(int perf);

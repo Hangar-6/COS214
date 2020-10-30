@@ -2,6 +2,15 @@
 
 Component::Component() {}
 
+Component::Component(Car* _baseCar) {
+    baseCar = _baseCar;
+}
+
+Component::~Component(){
+    //DEALLOCATE baseCar
+    delete baseCar;
+}
+
 int Component::getMaxPerformance() {
     return maxPerformance;
 }
