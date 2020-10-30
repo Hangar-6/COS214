@@ -5,7 +5,7 @@
 
 class Aerodynamics : public Component {
     public:
-        Aerodynamics(int _performance);
+        Aerodynamics(BaseCar* car, int _performance);
         void add(Car* component);
         Car* clone();
 };  

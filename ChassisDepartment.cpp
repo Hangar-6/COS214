@@ -1,9 +1,10 @@
 #include "ChassisDepartment.h"
+#include <iostream>
 
 using namespace std;
 
-ChassisDepartment::ChassisDepartment(){
-    Chassis* NewChassis = new Chassis (0);
+ChassisDepartment::ChassisDepartment(BaseCar* baseCar, int perf){
+    Chassis* NewChassis = new Chassis (baseCar, perf);
     this->setComponent(NewChassis);
     cout<<"New chassis is being prepared."<<endl;
 }

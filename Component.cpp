@@ -2,6 +2,11 @@
 
 Component::Component() {}
 
+Component::~Component(){
+    //DEALLOCATE baseCar
+    delete baseCar;
+}
+
 int Component::getMaxPerformance() {
     return maxPerformance;
 }

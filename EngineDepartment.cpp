@@ -1,9 +1,10 @@
 #include "EngineDepartment.h"
+#include <iostream>
 
 using namespace std;
 
-EngineDepartment::EngineDepartment(){
-    Engine* NewEngine = new Engine(0);
+EngineDepartment::EngineDepartment(BaseCar* baseCar, int perf){
+    Engine* NewEngine = new Engine(baseCar, perf);
     this->setComponent(NewEngine);
     cout<<"New engine is being prepared."<<endl;
 }

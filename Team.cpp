@@ -8,7 +8,7 @@ Team::~Team() {
     delete testing;
     delete car1;
     delete car2;
-    delete strategist; 
+    delete strategist;
     delete logistics;
 }
 
@@ -30,6 +30,14 @@ Cars Team::getCars() {
 Engineers Team::getEngineers() {
     Engineers engineers = {current, next};
     return engineers;
+}
+
+string Team::getTeamName(){
+    return teamName;
+}
+
+void Team::setConstructorPoints(int p){
+    ConstructorPoints = p;
 }
 
 void Team::setCar(Car* car) {
@@ -58,6 +66,7 @@ void Team::setEquipment(Equipment* _garage, Equipment* _catering) {
 void Team::setTesting(Testing* _testing) {
     testing = _testing;
 }
+<<<<<<< HEAD
 
 void Team::racePreparations() {
     current->buildCars(car1, car2);
@@ -66,3 +75,5 @@ void Team::racePreparations() {
 void Team::raceEnd() {
     current->disassemble(car1, car2);
 }
+=======
+>>>>>>> bcfa4db1032761182e4c2e53a05ff21a8eb15c18

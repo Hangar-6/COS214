@@ -15,9 +15,8 @@ class Location {
         LocationType type;
 
     public:
-        Location(LocationType _type, sting venue);
+        Location(LocationType _type, string venue);
         LocationType getLocation();
-        string decideVenue();//randomiser for venue selection
         string getVenue();
 };
 

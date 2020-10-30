@@ -10,13 +10,16 @@ class BaseCar : public Car {
     private:
         vector<Component*> components;
         vector<Tyre*> tyres;
+        int componentCount;
     
     public:
         BaseCar();
-        virtual ~BaseCar(); //IMPLEMENT
+        virtual ~BaseCar();
         void add(Car* component);
         Car* clone();
         void setTyres(vector<Tyre*> _tyres);
+        void setComponents(vector<Component*> _components);
+        void clearComponents();
 };
 
 #endif

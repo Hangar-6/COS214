@@ -6,6 +6,7 @@
 class Plane : public Logistics {
     public:
         void transport(RaceWeekend* race, Container* container);      // Plane used if EquipmentType = CAR
+         virtual string getType();
 };
 
 #endif

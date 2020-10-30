@@ -6,7 +6,7 @@
 
 class ElectronicsDepartment : public EngineeringDepartment {
 public:
-    ElectronicsDepartment();
+    ElectronicsDepartment(BaseCar* baseCar, int perf);
     Component* produce(int performance);
 
 };

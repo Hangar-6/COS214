@@ -5,7 +5,7 @@
 
 class Chassis : public Component {
     public:
-        Chassis(int _performance);
+        Chassis(BaseCar* car,int _performance);
         void add(Car* component);
         Car* clone();
 };

@@ -10,6 +10,9 @@ class Logistics {
 
     public:
         virtual void transport(RaceWeekend* race, Container* container) = 0;
+        virtual string getType() = 0;
+        void addNext(Logistics* Vehicle);
+        void removeNext();
 };
 
 #endif

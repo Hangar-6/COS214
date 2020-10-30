@@ -2,6 +2,7 @@
 #define ENGINEERINGDEPARTMENT_H
 
 #include "Component.h"
+#include "BaseCar.h"
 
 class EngineeringDepartment {
     public:
