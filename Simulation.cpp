@@ -10,49 +10,35 @@ void Simulation::test(Engineering* engineering, TestType type) {
     // randomise number betweeen 0 and 3 and cast random int to TestResult
 
     if(type == SIMULATION) {
-        TestResult result;
-        result = NOCHANGE;
+        srand(time(NULL));
+        int randomTest = rand() % 2;
+        TestResult Result = static_cast<TestResult>(randomTest);
+        ComponentType ComType;
         vector<Component*> Components = engineering->getComponents();
         cout<<"Simulation: Start..."<<endl;
         for (int i = 0; i < Components.size(); i++){
-            if (Components.at(i)==Aerodynamics){
-                cout<<"Simulation: Aerodynamics testing in progress..."<<endl;
-                if (Components.at(i)->getPerformance()-5 <= 0){
-                    result = UPGRADE;
-                    cout<<"Simulation: Aerodynamics failed..."<<endl;
-                }
-                else
-                    cout<<"Simulation: Aerodynamics passed..."<<endl;
-            }
-            if (Components.at(i)==Electronics){
-                cout<<"Simulation: Electronics testing in progress..."<<endl;
-                if (Components.at(i)->getPerformance()-5 <= 0){
-                    result = UPGRADE;
-                    cout<<"Simulation: Electronics failed..."<<endl;
-                }
-                else
-                    cout<<"Simulation: Electronics passed..."<<endl;
-            }
-            if (Components.at(i)==Engine){
-                cout<<"Simulation: Engine testing in progress..."<<endl;
-                if (Components.at(i)->getPerformance()-5 <= 0){
-                    result = UPGRADE;
-                    cout<<"Simulation: Engine failed..."<<endl;
-                }
-                cout<<"Simulation: Engine passed..."<<endl;
-            }
-            if (Components.at(i)==Chassis){
-                cout<<"Simulation: Chassis testing in progress..."<<endl;
-                if (Components.at(i)->getPerformance()-5 <= 0){
-                    result = UPGRADE;
-                    cout<<"Simulation: Chassis failed..."<<endl;
-                }
-                else
-                    cout<<"Simulation: Chassis passed..."<<endl;
+            ComType = Components[i]->getType();
+            cout <<"Simulation: ";
+            switch (ComType){
+                case 0:
+                    cout<<"Aerodynamics testing in progress..."<<endl;
+                    break;
+                case 1:
+                    cout<<"Chassis testing in progress..."<<endl;
+                    break;
+                case 2:
+                    cout<<"Electronics testing in progress..."<<endl;
+                    break;
+                case 3:
+                    cout<<"Engine testing in progress..."<<endl;
+                    break;
+                default:
+                    cout<<"Unknown component in testing..."<<endl;
+                    break;
             }
         }
         cout<<"Simulation: End"<<endl;
-        notify(engineering, result);
+        notify(engineering, Result);
     }
 
     else if(next)
