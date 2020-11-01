@@ -1,11 +1,13 @@
 #include "Component.h"
 
-Component::Component(int perf = 0) {
+Component::Component(int perf = 0) : Car() {
     performance = perf;
     baseCar = nullptr;
 }
 
-Component::~Component() {}
+Component::~Component() {
+    baseCar = nullptr;
+}
 
 int Component::getPerformance() {
     return performance;

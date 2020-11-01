@@ -1,4 +1,3 @@
-
 #include "Container.h"
 
 Container::Container(Equipment *_equipment) {

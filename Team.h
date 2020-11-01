@@ -5,7 +5,6 @@ using namespace std;
 
 #include "CurrentEngineering.h"
 #include "NextEngineering.h"
-#include "Car.h"
 #include "Strategist.h"
 #include "Logistics.h"
 #include "Testing.h"

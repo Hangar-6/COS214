@@ -1,4 +1,4 @@
-#include "EngineDepartment.h"
+#include "EngineeringDepartment.h"
 
 EngineeringDepartment::EngineeringDepartment() {
     cout<<"Engineering department has been created."<<endl;
@@ -10,7 +10,7 @@ EngineeringDepartment::~EngineeringDepartment() {
     component = nullptr;
 }
 
-Component * EngineeringDepartment::getComponent() {
+Component* EngineeringDepartment::getComponent() {
     return component;
 }
 

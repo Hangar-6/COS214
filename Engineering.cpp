@@ -23,58 +23,56 @@ vector<Component*> Engineering::getComponents() {
     return components;
 }
 
-void Engineering::upgrade(TestResult result, ComponentType component) { //result is based off enum and make decision
-    
+void Engineering::upgrade(TestResult result, ComponentType component) { 
+    //result is based off enum and make decision
     // call produce with new performance value if result is UPGRADE and decrease performance if result is DOWNGRADE
     // increase and decrease performance by 1 for now
-    // clear components vector and call produce for each
-    components.clear();
-    int change=0;
-    if(result==UPGRADE){
-        change=1;
-    }
-    else if(result==DOWNGRADE){
-        change=-1;
-    }
-
-    switch (component) {
+    switch(component) {
         case AERODYNAMICS:
-            components.push_back(aeroDep->produce(aeroDep->getComponent()->getPerformance()+change));
-            components.push_back(engineDep->produce(engineDep->getComponent()->getPerformance()));
-            components.push_back(electronicsDep->produce(electronicsDep->getComponent()->getPerformance()));
-            components.push_back(chassisDep->produce(chassisDep->getComponent()->getPerformance()));
-            break;
-
-        case ENGINE:
-            components.push_back(engineDep->produce(engineDep->getComponent()->getPerformance()+change));
-            components.push_back(aeroDep->produce(aeroDep->getComponent()->getPerformance()));
-            components.push_back(electronicsDep->produce(electronicsDep->getComponent()->getPerformance()));
-            components.push_back(chassisDep->produce(chassisDep->getComponent()->getPerformance()));
-            break;
-
-        case ELECTRONICS:
-            components.push_back(electronicsDep->produce(electronicsDep->getComponent()->getPerformance()+change));
-            components.push_back(aeroDep->produce(aeroDep->getComponent()->getPerformance()));
-            components.push_back(engineDep->produce(engineDep->getComponent()->getPerformance()));
-            components.push_back(chassisDep->produce(chassisDep->getComponent()->getPerformance()));
+            if(result == UPGRADE) 
+                aeroDep->produce(aeroDep->getComponent()->getPerformance()+1);
+            else if(result == DOWNGRADE) 
+                aeroDep->produce(aeroDep->getComponent()->getPerformance()-1);
             break;
 
         case CHASSIS:
-            components.push_back(chassisDep->produce(chassisDep->getComponent()->getPerformance()+change));
-            components.push_back(aeroDep->produce(aeroDep->getComponent()->getPerformance()));
-            components.push_back(engineDep->produce(engineDep->getComponent()->getPerformance()));
-            components.push_back(electronicsDep->produce(electronicsDep->getComponent()->getPerformance()));
+            if(result == UPGRADE) 
+                chassisDep->produce(chassisDep->getComponent()->getPerformance()+1);
+            else if(result == DOWNGRADE) 
+                chassisDep->produce(chassisDep->getComponent()->getPerformance()-1);
             break;
 
-        default:
+        case ELECTRONICS:
+            if(result == UPGRADE) 
+                electronicsDep->produce(electronicsDep->getComponent()->getPerformance()+1);
+            else if(result == DOWNGRADE) 
+                electronicsDep->produce(electronicsDep->getComponent()->getPerformance()-1);
+            break;
+
+        case ENGINE:
+            if(result == UPGRADE) 
+                engineDep->produce(engineDep->getComponent()->getPerformance()+1);
+            else if(result == DOWNGRADE) 
+                engineDep->produce(engineDep->getComponent()->getPerformance()-1);
             break;
     }
 }       
 
 void Engineering::buildCars(Car* car1, Car* car2) {
     // go through vector of components for each car, clone each component and set baseCar to a car
+    // clones components and sets their baseCar to the cars and adds them to the cars
 
-}   // clones components and sets their baseCar to the cars and adds them to the cars
+    vector<Component*>::iterator it;
+    for(it = components.begin(); it != components.end(); ++it) {
+        Car* c1 = (*it)->clone();
+        static_cast<Component*>(c1)->setBaseCar(car1);
+        c1->add(c1);
+
+        Car* c2 = (*it)->clone();
+        static_cast<Component*>(c2)->setBaseCar(car2);
+        c2->add(c2);
+    }
+}   
 
 void Engineering::disassemble(Car* car1, Car* car2) {
     static_cast<BaseCar*>(car1)->clearComponents();
@@ -83,8 +81,10 @@ void Engineering::disassemble(Car* car1, Car* car2) {
 }     // clears vector<Component*> of cars
 
 void Engineering::service(Car* car1, Car* car2) {
+    // service both cars
     cout<<"Both cars are currently being serviced. All parts are being tested and repaired."<<endl;
-}     // service both cars
+    // maybe add reliability to Car and set it back to original value after being serviced
+}     
 
 int Engineering::getWindTunnelRuns() {
     return windTunnelRuns;

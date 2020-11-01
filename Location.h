@@ -7,7 +7,7 @@ using namespace std;
 #include <stdlib.h>
 #include <time.h>
 
-enum LocationType {EUROPEAN, NONEUROPEAN};
+enum LocationType {EUROPEAN, NONEUROPEAN, FACTORY};
 
 class Location {
     private:

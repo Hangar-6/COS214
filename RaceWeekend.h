@@ -18,7 +18,7 @@ class RaceWeekend {
         RaceSession* race;
 
     public:
-        RaceWeekend(Location* _location);
+        RaceWeekend(Location* _location, RecommendedStrategy _strategy);
         ~RaceWeekend();
         int determineTeamPoints(FinishPosition positions);      // set Team's points to total points scored
         int determineDriverPoints(int position);      // set driver's points to total points scored

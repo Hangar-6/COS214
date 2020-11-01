@@ -9,6 +9,4 @@ void NextEngineering::buildComponents() {
     components.push_back(engineDep->produce());
     components.push_back(electronicsDep->produce());
     components.push_back(chassisDep->produce());
-
-    // better to use push_back than setting component[i]
 }

@@ -12,11 +12,7 @@ struct FinishPosition {
     int car2;
 };
 
-
 class RaceSession {
-    protected:
-        RaceSession* next;
-
     public:
         virtual FinishPosition runSession(Team* team) = 0;        // simulate running of session
 };

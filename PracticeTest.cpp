@@ -10,7 +10,7 @@ void PracticeTest::test(Engineering* engineering, TestType type) {
 
     if(type == PRACTICE) {
         srand(time(NULL));
-        int randomTest = rand() % 2;
+        int randomTest = rand() % 3;
         TestResult Result = static_cast<TestResult>(randomTest);
         ComponentType ComType;
         vector<Component*> Components = engineering->getComponents();
@@ -19,17 +19,21 @@ void PracticeTest::test(Engineering* engineering, TestType type) {
             ComType = Components[i]->getType();
             cout <<"Practice Test: ";
             switch (ComType){
-                case 0:
+                case AERODYNAMICS:
                     cout<<"Aerodynamics testing in progress..."<<endl;
+                    notify(engineering, Result, AERODYNAMICS);
                     break;
-                case 1:
+                case CHASSIS:
                     cout<<"Chassis testing in progress..."<<endl;
+                    notify(engineering, Result, CHASSIS);
                     break;
-                case 2:
+                case ELECTRONICS:
                     cout<<"Electronics testing in progress..."<<endl;
+                    notify(engineering, Result, ELECTRONICS);
                     break;
-                case 3:
+                case ENGINE:
                     cout<<"Engine testing in progress..."<<endl;
+                    notify(engineering, Result, ENGINE);
                     break;
                 default:
                     cout<<"Unknown component in testing..."<<endl;
@@ -37,7 +41,6 @@ void PracticeTest::test(Engineering* engineering, TestType type) {
             }
         }
         cout<<"Practice Test: End"<<endl;
-        notify(engineering, Result);
     }
         
     else if(next)

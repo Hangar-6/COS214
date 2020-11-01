@@ -1,11 +1,8 @@
-
 #include "Plane.h"
 #include <iostream>
 
 void Plane::transport(RaceWeekend *race, Container *container) {
     Location *raceLocation= race->getLocation();
-
-    // better to change to switch
 
     if(container->getEquipment()->getType()==CAR)
     {
@@ -19,7 +16,7 @@ void Plane::transport(RaceWeekend *race, Container *container) {
 
         if (next== nullptr)
         {
-            cout<<"Non of the vehicles in the chain of responsibility is able to transport the container! Please purchase a Truck"<<endl;
+            cout<<"None of the vehicles in the chain of responsibility are able to transport the container! Please purchase a Truck"<<endl;
             return;
         }
         next->transport(race,container);
@@ -29,7 +26,7 @@ void Plane::transport(RaceWeekend *race, Container *container) {
     cout<<"Planes are only responsible for transporting cars, the next vehicle type will try to transport the container!"<<endl;
     if (next== nullptr)
     {
-        cout<<"Non of the vehicles in the chain of responsibility is able to transport the container! Please purchase a Ship"<<endl;
+        cout<<"None of the vehicles in the chain of responsibility are able to transport the container! Please purchase a Ship"<<endl;
         return;
     }
     next->transport(race,container);

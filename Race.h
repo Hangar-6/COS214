@@ -5,7 +5,6 @@
 
 class Race : public RaceSession {
     public:
-        Race();
         FinishPosition runSession(Team* team);      // determine finishing position for each car
 };
 

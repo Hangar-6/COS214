@@ -45,4 +45,6 @@ void BaseCar::clearComponents() {
     for(itr = tyres.begin(); itr != tyres.end(); ++itr)
         delete *itr;
     tyres.clear();
+    
+    performance = 0;
 }

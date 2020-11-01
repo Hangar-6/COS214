@@ -9,6 +9,8 @@ class Logistics {
         Logistics* next;        // used for chain of responsibility
 
     public:
+        Logistics();
+        virtual ~Logistics();
         virtual void transport(RaceWeekend* race, Container* container) = 0;
         virtual string getType() = 0;
         void addNext(Logistics* Vehicle);
