@@ -27,7 +27,48 @@ void Engineering::upgrade(TestResult result, ComponentType component) { //result
     
     // call produce with new performance value if result is UPGRADE and decrease performance if result is DOWNGRADE
     // increase and decrease performance by 1 for now
-    // clear components vector and call produce for each 
+    // clear components vector and call produce for each
+    components.clear();
+    int change=0;
+    if(result==UPGRADE){
+        change=1;
+    }
+    else if(result==DOWNGRADE){
+        change=-1;
+    }
+
+    switch (component) {
+        case AERODYNAMICS:
+            components.push_back(aeroDep->produce(aeroDep->getComponent()->getPerformance()+change));
+            components.push_back(engineDep->produce(engineDep->getComponent()->getPerformance()));
+            components.push_back(electronicsDep->produce(electronicsDep->getComponent()->getPerformance()));
+            components.push_back(chassisDep->produce(chassisDep->getComponent()->getPerformance()));
+            break;
+
+        case ENGINE:
+            components.push_back(engineDep->produce(engineDep->getComponent()->getPerformance()+change));
+            components.push_back(aeroDep->produce(aeroDep->getComponent()->getPerformance()));
+            components.push_back(electronicsDep->produce(electronicsDep->getComponent()->getPerformance()));
+            components.push_back(chassisDep->produce(chassisDep->getComponent()->getPerformance()));
+            break;
+
+        case ELECTRONICS:
+            components.push_back(electronicsDep->produce(electronicsDep->getComponent()->getPerformance()+change));
+            components.push_back(aeroDep->produce(aeroDep->getComponent()->getPerformance()));
+            components.push_back(engineDep->produce(engineDep->getComponent()->getPerformance()));
+            components.push_back(chassisDep->produce(chassisDep->getComponent()->getPerformance()));
+            break;
+
+        case CHASSIS:
+            components.push_back(chassisDep->produce(chassisDep->getComponent()->getPerformance()+change));
+            components.push_back(aeroDep->produce(aeroDep->getComponent()->getPerformance()));
+            components.push_back(engineDep->produce(engineDep->getComponent()->getPerformance()));
+            components.push_back(electronicsDep->produce(electronicsDep->getComponent()->getPerformance()));
+            break;
+
+        default:
+            break;
+    }
 }       
 
 void Engineering::buildCars(Car* car1, Car* car2) {

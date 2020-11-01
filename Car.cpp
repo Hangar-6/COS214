@@ -2,6 +2,8 @@
 
 Car::Car() {}
 
+Car::~Car() {}
+
 int Car::getPerformance() {
     return performance;
 }

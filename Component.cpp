@@ -5,10 +5,7 @@ Component::Component(int perf = 0) {
     baseCar = nullptr;
 }
 
-Component::~Component() {
-    // DEALLOCATE baseCar
-    // never delete baseCar, Team owns and deletes baseCar
-}
+Component::~Component() {}
 
 int Component::getPerformance() {
     return performance;
@@ -18,3 +15,6 @@ void Component::setPerformance(int perf) {
     performance = perf;
 }
 
+void Component::setBaseCar(Car *car) {
+    baseCar = car;
+}
