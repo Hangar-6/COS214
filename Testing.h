@@ -1,6 +1,10 @@
 #ifndef TESTING_H
 #define TESTING_H
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
 enum TestResult {NOCHANGE, UPGRADE, DOWNGRADE};
 
 enum TestType {WINDTUNNEL, SIMULATION, PRACTICE};
