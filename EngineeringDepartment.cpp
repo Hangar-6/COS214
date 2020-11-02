@@ -1,8 +1,6 @@
 #include "EngineeringDepartment.h"
 
-EngineeringDepartment::EngineeringDepartment() {
-    cout<<"Engineering department has been created."<<endl;
-}
+EngineeringDepartment::EngineeringDepartment() {}
 
 EngineeringDepartment::~EngineeringDepartment() {
     delete component;

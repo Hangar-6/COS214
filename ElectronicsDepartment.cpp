@@ -10,7 +10,9 @@ ElectronicsDepartment::ElectronicsDepartment() : EngineeringDepartment() {
 ElectronicsDepartment::~ElectronicsDepartment() {}
 
 Component* ElectronicsDepartment::produce(int performance) {
-    component->setPerformance(performance);
-    cout<<"Electronics have been produced with a performance value of "<<performance<<endl;
+    if(performance > 0) {
+        component->setPerformance(performance);
+        cout<<"Aerodynamics has been produced with a performance value of "<<performance<<endl;
+    }
     return component;
 }

@@ -1,5 +1,7 @@
 #include "Engineering.h"
 
+int Engineering::windTunnelRuns = 400;
+
 Engineering::Engineering() {
     aeroDep = new AerodynamicsDepartment();
     chassisDep = new ChassisDepartment();
@@ -92,4 +94,10 @@ int Engineering::getWindTunnelRuns() {
 
 void Engineering::setWindTunnelRuns(int runs) {
     windTunnelRuns = runs;
+}
+
+void Engineering::viewComponentPeformance() {
+    for(Component* c : components) {
+        cout << c->getPerformance() << endl;
+    }
 }

@@ -11,6 +11,7 @@ using namespace std;
 #include "BaseCar.h"
 #include "Equipment.h"
 #include "CarAdapter.h"
+#include "Storage.h"
 #include <string>
 
 class Logistics;
@@ -50,11 +51,11 @@ class Team {
         Team(string name);
         ~Team();
         void addPoints(int d1Points, int d2Points);
-        void runTest(TestType type);
         Cars getCars();
         Engineers getEngineers();
         string getTeamName();
-        void transport(EquipmentType type);
+        void transport(RaceWeekend* race);
+        void test();
         void test(TestType type, Engineering* engineering);
         void setConstructorPoints(int p);
         void setCar(Car* car);
@@ -63,7 +64,7 @@ class Team {
         void setLogistics(Logistics* logistics);
         void setEquipment(Equipment* garage, Equipment* catering);
         void setTesting(Testing* testing);
-        void racePreparations();
+        void racePreparations(RaceWeekend* race);
         void raceEnd();
 };
 

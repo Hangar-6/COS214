@@ -14,7 +14,7 @@ using namespace std;
 
 class Engineering {
     protected:
-        int windTunnelRuns;
+        static int windTunnelRuns;
         vector<Component*> components;
 
         AerodynamicsDepartment* aeroDep;
@@ -33,6 +33,7 @@ class Engineering {
         void service(Car* car1, Car* car2);     // service both cars
         int getWindTunnelRuns();
         void setWindTunnelRuns(int runs);
+        void viewComponentPeformance();
 };
 
 #endif

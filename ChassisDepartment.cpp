@@ -9,7 +9,9 @@ ChassisDepartment::ChassisDepartment() : EngineeringDepartment() {
 ChassisDepartment::~ChassisDepartment() {}
 
 Component* ChassisDepartment::produce(int performance) {
-    component->setPerformance(performance);
-    cout<<"Chassis has been produced with a performance value of "<<performance<<endl;
+    if(performance > 0) {
+        component->setPerformance(performance);
+        cout<<"Aerodynamics has been produced with a performance value of "<<performance<<endl;
+    }
     return component;
 }

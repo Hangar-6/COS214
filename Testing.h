@@ -3,7 +3,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
+#include <ctime>
 
 enum TestResult {NOCHANGE, UPGRADE, DOWNGRADE};
 
