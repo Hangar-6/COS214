@@ -12,6 +12,7 @@ RaceWeekend::~RaceWeekend() {
 	delete race;
 	delete qualifying;
 	delete practice;
+	delete location;
 }
 
 int RaceWeekend::determineTeamPoints(FinishPosition positions){

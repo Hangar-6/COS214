@@ -1,6 +1,6 @@
 #include "Engine.h"
 
-Engine::Engine(int _performance = 0) : Component(_performance) {}
+Engine::Engine(int _performance) : Component(_performance) {}
 
 void Engine::add(Car *component) {
     baseCar->add(component);

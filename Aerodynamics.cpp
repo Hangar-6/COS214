@@ -1,6 +1,6 @@
 #include "Aerodynamics.h"
 
-Aerodynamics::Aerodynamics(int _performance = 0) : Component(_performance) {}
+Aerodynamics::Aerodynamics(int _performance) : Component(_performance) {}
 
 void Aerodynamics::add(Car *component) {
     //ADD TO BASE

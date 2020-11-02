@@ -2,7 +2,7 @@
 
 using namespace std;
 
-WindTunnel::WindTunnel() : Testing() {}
+WindTunnel::~WindTunnel() {}
 
 void WindTunnel::test(Engineering* engineering, TestType type) {
     // go through each component from components vector, use switch to check ComponentType

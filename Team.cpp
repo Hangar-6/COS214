@@ -10,6 +10,8 @@ Team::~Team() {
     delete car2;
     delete strategist;
     delete logistics;
+    delete garage;
+    delete catering;
 }
 
 void Team::addPoints(int d1Points, int d2Points) {

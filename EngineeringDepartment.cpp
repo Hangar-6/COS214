@@ -5,8 +5,7 @@ EngineeringDepartment::EngineeringDepartment() {
 }
 
 EngineeringDepartment::~EngineeringDepartment() {
-    if(component) 
-        delete component;
+    delete component;
     component = nullptr;
 }
 

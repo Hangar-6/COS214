@@ -7,6 +7,9 @@
 #include "Qualifying.h"
 #include "Race.h"
 
+class RaceSession;
+class Team;
+
 enum RecommendedStrategy {AGGRESSIVE, BALANCED, CONSERVATIVE};
 
 class RaceWeekend {

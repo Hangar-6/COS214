@@ -1,6 +1,6 @@
 #include "Component.h"
 
-Component::Component(int perf = 0) : Car() {
+Component::Component(int perf) : Car() {
     performance = perf;
     baseCar = nullptr;
 }

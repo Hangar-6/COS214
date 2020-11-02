@@ -4,6 +4,8 @@
 #include "RaceWeekend.h"
 #include "Container.h"
 
+class RaceWeekend;
+
 class Logistics {
     protected:
         Logistics* next;        // used for chain of responsibility

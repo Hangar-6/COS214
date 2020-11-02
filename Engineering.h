@@ -7,10 +7,6 @@
 #include "EngineDepartment.h"
 #include "Testing.h"
 #include "BaseCar.h"
-#include "Aerodynamics.h"
-#include "Engine.h"
-#include "Chassis.h"
-#include "Electronics.h"
 #include <vector>
 #include <iostream>
 

@@ -7,12 +7,13 @@ enum TestType {WINDTUNNEL, SIMULATION, PRACTICE};
 
 #include "Engineering.h"
 
+class Engineering;
+
 class Testing {
     protected:
-        Testing* next;
+        Testing* next = nullptr;
 
     public:
-        Testing();
         virtual ~Testing();
         void addNext(Testing* NextTester);  //Adding pointer to next object in chain
         virtual void test(Engineering* engineering, TestType type) = 0;     // simulate a test using chain of responsibility

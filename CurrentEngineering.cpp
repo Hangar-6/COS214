@@ -2,6 +2,8 @@
 
 CurrentEngineering::CurrentEngineering() : Engineering() {}
 
+CurrentEngineering::~CurrentEngineering() {}
+
 void CurrentEngineering::buildComponents(){
     /** CREATE COMPONENT AND ADD TO VECTOR**/
 

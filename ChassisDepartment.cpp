@@ -6,7 +6,9 @@ ChassisDepartment::ChassisDepartment() : EngineeringDepartment() {
     component = new Chassis();
 }
 
-Component* ChassisDepartment::produce(int performance = 0) {
+ChassisDepartment::~ChassisDepartment() {}
+
+Component* ChassisDepartment::produce(int performance) {
     component->setPerformance(performance);
     cout<<"Chassis has been produced with a performance value of "<<performance<<endl;
     return component;

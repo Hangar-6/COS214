@@ -2,6 +2,8 @@
 
 NextEngineering::NextEngineering() : Engineering() {}
 
+NextEngineering::~NextEngineering() {}
+
 void NextEngineering::buildComponents() {
     /** CREATE COMPONENT AND ADD TO VECTOR**/
 

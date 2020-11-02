@@ -1,6 +1,6 @@
 #include "Electronics.h"
 
-Electronics::Electronics(int _performance = 0) : Component(_performance) {}
+Electronics::Electronics(int _performance) : Component(_performance) {}
 
 void Electronics::add(Car *component) {
     baseCar->add(component);

@@ -7,6 +7,7 @@
 class ChassisDepartment : public EngineeringDepartment {
     public:
         ChassisDepartment();
+        ~ChassisDepartment();
         Component* produce(int performance = 0);
 };
 

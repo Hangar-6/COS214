@@ -9,10 +9,12 @@ using namespace std;
 #include "Logistics.h"
 #include "Testing.h"
 #include "BaseCar.h"
-#include "GarageEquipment.h"
-#include "CateringEquipment.h"
+#include "Equipment.h"
 #include "CarAdapter.h"
 #include <string>
+
+class Logistics;
+class Strategist;
 
 struct Cars {
     Car* car1;

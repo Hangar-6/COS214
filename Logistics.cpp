@@ -3,7 +3,7 @@
 Logistics::Logistics() : next(nullptr) {}
 
 Logistics::~Logistics() {
-    if(!next)
+    if(next)
         delete next;
     next = nullptr;
 }

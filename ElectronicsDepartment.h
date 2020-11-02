@@ -7,6 +7,7 @@
 class ElectronicsDepartment : public EngineeringDepartment {
     public:
         ElectronicsDepartment();
+        ~ElectronicsDepartment();
         Component* produce(int performance = 0);
 };
 

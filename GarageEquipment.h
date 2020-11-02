@@ -5,7 +5,6 @@
 
 class GarageEquipment : public Equipment {
     public:
-        GarageEquipment();
         virtual EquipmentType getType();
 };
 

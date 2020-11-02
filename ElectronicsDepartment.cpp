@@ -7,7 +7,9 @@ ElectronicsDepartment::ElectronicsDepartment() : EngineeringDepartment() {
     component = new Electronics();
 }
 
-Component* ElectronicsDepartment::produce(int performance = 0){
+ElectronicsDepartment::~ElectronicsDepartment() {}
+
+Component* ElectronicsDepartment::produce(int performance) {
     component->setPerformance(performance);
     cout<<"Electronics have been produced with a performance value of "<<performance<<endl;
     return component;

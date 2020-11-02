@@ -1,6 +1,6 @@
 #include "Chassis.h"
 
-Chassis::Chassis(int _performance = 0) : Component(_performance) {}
+Chassis::Chassis(int _performance) : Component(_performance) {}
 
 void Chassis::add(Car *component) {
     baseCar->add(component);

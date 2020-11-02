@@ -4,7 +4,9 @@ AerodynamicsDepartment::AerodynamicsDepartment() : EngineeringDepartment() {
     component = new Aerodynamics();
 }
 
-Component* AerodynamicsDepartment::produce(int performance = 0) {
+AerodynamicsDepartment::~AerodynamicsDepartment() {}
+
+Component* AerodynamicsDepartment::produce(int performance) {
     component->setPerformance(performance);
     cout<<"Aerodynamics has been produced with a performance value of "<<performance<<endl;
     return component;

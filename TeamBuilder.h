@@ -8,6 +8,8 @@
 #include "WindTunnel.h"
 #include "Simulation.h"
 #include "PracticeTest.h"
+#include "GarageEquipment.h"
+#include "CateringEquipment.h"
 
 class TeamBuilder : public Builder {
     public:

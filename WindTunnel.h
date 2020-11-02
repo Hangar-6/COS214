@@ -5,7 +5,7 @@
 
 class WindTunnel : public Testing {
     public:
-        WindTunnel();
+        ~WindTunnel();
         void test(Engineering* engineering, TestType type);    
         // handles test of type WINDTUNNEL and decrements engineering's windTunnelRuns for each run
 };

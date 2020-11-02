@@ -5,11 +5,13 @@
 
 using namespace std;
 
-Testing::Testing() : next(nullptr) {}
+Testing::~Testing() {
+    if(next)
+        delete next;
+    next = nullptr;
+}
 
-Testing::~Testing() {}
-
-void Testing::addNext(Testing *NextTester) {
+void Testing::addNext(Testing* NextTester) {
     if(next)
         next->addNext(NextTester);
     else
