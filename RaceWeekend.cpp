@@ -123,7 +123,7 @@ void RaceWeekend::runSessions(Team* team){
 	else practice2 = "bad";
 	//Example output
 	cout << team->getTeamName() << " have completed their practice laps with car 1 having " << practice1 <<
-	" practice laps and car 2 having " << practice2 << "practice laps.\n";
+	" practice laps and car 2 having " << practice2 << " practice laps.\n";
 
 	/*
 	2. Qualifyers
@@ -145,7 +145,7 @@ void RaceWeekend::runSessions(Team* team){
 			q.car2++;
 	}
 	else{
-		if(q.car2<10)
+		if(q.car2<20)
 			q.car2--;
 	}
 
