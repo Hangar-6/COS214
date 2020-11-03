@@ -30,18 +30,34 @@ int main() {
 
     /*** RACING ***/
 
+    cout<<"Welcome to the 2021 Formula One Championship"<<endl<<endl;
+
+    //ADD TO INTRO MESSAGE
+
     for (int i = 0; i < 22; i++) {
         /*** TEST COMPONENTS ***/
+        cout<<"Testing Components "<<"---------------------------------------------"<<endl<<endl;
         team->test();
 
-        /*** STORE COMPONENTS ***/
+        cout<<endl<<endl<<endl;
 
         /*** TRANSPORT TO RACEWEEKND ***/
-          team->transport(races[i]);
+        cout<<"Transporting Equipment "<<"---------------------------------------------"<<endl<<endl;
+        team->transport(races[i]);
+        cout<<endl<<endl<<endl;
 
         /*** START RACING ***/
+        cout<<"Race Weekend: "<<(i+1)<<" ---------------------------------------------"<<endl<<endl;
         races[i]->runSessions(team);
+        cout<<endl<<endl<<endl;
     }
+
+    //OUTPUT SEASON RESULTS
+
+    for(int i = 0; i < 22; i++) {
+      delete races[i];
+    }
+    delete[] races;
 
     delete team;
     delete director;
