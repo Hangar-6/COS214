@@ -27,9 +27,6 @@ int main() {
       //DIRECTOR
     Director* director = new Director();
   	Team* team = director->buildTeam("Hangar-6");
-    RaceWeekend* race = new RaceWeekend(new Location(EUROPEAN, "Monaco"), AGGRESSIVE);
-    team->transport(race);
-    team->test();
 
     /*** RACING ***/
 
