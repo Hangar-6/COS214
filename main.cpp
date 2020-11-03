@@ -53,6 +53,7 @@ int main() {
     }
 
     //OUTPUT SEASON RESULTS
+    team->printSeasonResults();
 
     for(int i = 0; i < 22; i++) {
       delete races[i];

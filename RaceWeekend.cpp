@@ -99,8 +99,8 @@ int RaceWeekend::determineDriverPoints(int position) {
 
 void RaceWeekend::runSessions(Team* team){
 	//Example output for start of race weekend
-	cout << "Welcome to FORMULA 1 Grand Prix where " << team->getTeamName() << " will be racing, along with others, " <<
-	"here at " << location->getVenue() << endl;
+	cout << endl << "Welcome to FORMULA 1 Grand Prix where " << team->getTeamName() << " will be racing, along with others, " <<
+	"here at " << location->getVenue() << endl << endl;
 
 	bool pole1 = false;     //pole for car 1 - true if pole position, else false
 	bool pole2 = false;     //pole for car 2 - true if pole position, else false
@@ -122,8 +122,8 @@ void RaceWeekend::runSessions(Team* team){
 		practice2 = "good";
 	else practice2 = "bad";
 	//Example output
-	cout << team->getTeamName() << " have completed their practice laps with car 1 having " << practice1 <<
-	" practice laps and car 2 having " << practice2 << " practice laps.\n";
+	cout <<"#####Practice#### \n"<< team->getTeamName() << " have completed their practice laps with car 1 having " << practice1 <<
+	" practice laps and car 2 having " << practice2 << " practice laps." << endl << endl;
 
 	/*
 	2. Qualifyers
@@ -155,8 +155,8 @@ void RaceWeekend::runSessions(Team* team){
 	if(q.car2<4)
 		pole2 = true;
 	//Example output
-	cout << "After completing the qualifying lap, car 1 finished at position " << q.car1 <<
-	" and car 2 finshed at position " << q.car2 << endl;
+	cout <<"#####Qualifyers#### \n"<< "After completing the qualifying lap, car 1 finished at position " << q.car1 <<
+	" and car 2 finshed at position " << q.car2 << endl << endl;
 
 
 	/*
@@ -177,8 +177,8 @@ void RaceWeekend::runSessions(Team* team){
 			r.car2 = r.car2+1;
 	}
 	//Example output
-	cout << "With the final race completed, car 1 finished at position " << r.car1 <<
-	" and car 2 finshed at position " << r.car2 << endl;
+	cout <<"#####Race#### \n"<< "Its lights out and away we go! \nWith the final race completed, car 1 finished at position " << r.car1 <<
+	" and car 2 finshed at position " << r.car2 << endl << endl;
 
 	//Finally, determine points for team and drivers
 	int d1 = determineDriverPoints(r.car1);  //car1
@@ -186,6 +186,10 @@ void RaceWeekend::runSessions(Team* team){
 	int t = determineTeamPoints(r); //team
 	team->addPoints(d1,d2);
 	team->setConstructorPoints(t);
+
+	cout << "Season so far... \n" << team->getTeamName() <<" \t" << team->getTeamPoints() << " points\nCar 1 \t" << team->getCar1Points() << " points \nCar 2 \t" << team->getCar2Points() << " points" << endl;
+
+	cout << "Thanks for joining us this weekend and we hope to see you next time!" << endl << endl;
 
 }
 
