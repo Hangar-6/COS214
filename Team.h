@@ -66,6 +66,7 @@ class Team {
         void setTesting(Testing* testing);
         void racePreparations(RaceWeekend* race);
         void raceEnd();
+        void seasonEnd();
 };
 
 #endif

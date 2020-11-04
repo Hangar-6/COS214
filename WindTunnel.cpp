@@ -10,11 +10,9 @@ void WindTunnel::test(Engineering* engineering, TestType type) {
     // decrement Engineering' windTunnelRuns after every test
 
     if(type == WINDTUNNEL && engineering->getWindTunnelRuns() > 0) {
-        srand(time(0));
         int randomTest = rand() % 3;
         TestResult Result = static_cast<TestResult>(randomTest);
         vector<Component*> Components = engineering->getComponents();
-        cout<<"Wind Tunnel Test: Start..."<<endl;
 
         vector<Component*>::iterator it;
         for (it = Components.begin(); it != Components.end(); ++it){
@@ -36,8 +34,6 @@ void WindTunnel::test(Engineering* engineering, TestType type) {
                     break;
             }
         }
-        cout<< "All parts tested\n";
-        cout<<"Wind Tunnel Test: End"<<endl;
         engineering->setWindTunnelRuns((engineering->getWindTunnelRuns()-1));
     }
         

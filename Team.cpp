@@ -15,9 +15,9 @@ Team::~Team() {
 }
 
 void Team::addPoints(int d1Points, int d2Points) {
-    Driver1Points = d1Points;
-    Driver2Points = d2Points;
-    ConstructorPoints = d1Points + d2Points;
+    Driver1Points += d1Points;
+    Driver2Points += d2Points;
+    ConstructorPoints += (d1Points + d2Points);
 }
 
 Cars Team::getCars() {
@@ -78,14 +78,13 @@ void Team::raceEnd() {
 
 void Team::test() {
     // perform multiple tests WindTunnel and Simulation tests before races for both engineering teams
-    for(int i = 0; i < 10; i++) {
+    cout << "Wind Tunnel Tests and Simulation Tests will be performed on all components\n";
+    for(int i = 0; i < 9; i++) {
         testing->test(current, WINDTUNNEL);
         testing->test(current, SIMULATION);
         testing->test(next, WINDTUNNEL);
         testing->test(next, SIMULATION);
     }
-    current->viewComponentPeformance();
-    next->viewComponentPeformance();
 }
 
 void Team::test(TestType type, Engineering* engineering) {
@@ -97,6 +96,7 @@ void Team::test(TestType type, Engineering* engineering) {
 void Team::transport(RaceWeekend* race) {
     // store all equipment and both cars into containers and move containers to storage
     // use logistics to transport all containers
+    cout << teamName << " prepares containers to ship all their equipment\n";
     vector<Storage> storage;
     storage.push_back(new Container(garage));
     storage.push_back(new Container(catering));
@@ -112,6 +112,27 @@ void Team::transport(RaceWeekend* race) {
     }
     storage.clear();
 
+    if(!race)
+        current->service(car1, car2);
+
     delete adapter1;
     delete adapter2;
+}
+
+void Team::seasonEnd() {
+    cout << teamName << " finished with " << ConstructorPoints << " points\n";
+    cout << "Driver 1 finished with " << Driver1Points << " points and Driver 2 finished with " << Driver2Points << " points\n";
+    // transfer next components to current components
+    vector<Component*> c1 = current->getComponents();
+    vector<Component*> c2 = next->getComponents();
+    vector<Component*>::iterator curr;
+    vector<Component*>::iterator nxt;
+
+    for(curr = c1.begin(), nxt = c2.begin(); curr != c1.end() && nxt != c2.end(); ++curr, ++nxt) {
+        (*curr)->setPerformance((*nxt)->getPerformance());
+        (*nxt)->setPerformance(0);
+    }
+
+    cout << "Next Engineering transfers its components to Current Engineering and begins its work on new components\n";
+
 }

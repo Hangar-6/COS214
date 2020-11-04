@@ -7,8 +7,9 @@ struct FinishPosition {
 };
 
 // #include "Team.h"
+#include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
+#include <ctime>
 
 class Team;
 

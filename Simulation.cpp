@@ -10,11 +10,9 @@ void Simulation::test(Engineering* engineering, TestType type) {
     // randomise number betweeen 0 and 3 and cast random int to TestResult
 
     if(type == SIMULATION) {
-        srand(time(0));
         int randomTest = rand() % 3;
         TestResult Result = static_cast<TestResult>(randomTest);
         vector<Component*> Components = engineering->getComponents();
-        cout<<"Simulation: Start..."<<endl;
 
         for (int i = 0; i < Components.size(); i++){
             ComponentType ComType = Components[i]->getType();
@@ -35,8 +33,6 @@ void Simulation::test(Engineering* engineering, TestType type) {
                     break;
             }
         }
-        cout<< "All parts tested\n";
-        cout<<"Simulation: End"<<endl;
     }
 
     else if(next)

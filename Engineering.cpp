@@ -85,6 +85,12 @@ void Engineering::disassemble(Car* car1, Car* car2) {
 void Engineering::service(Car* car1, Car* car2) {
     // service both cars
     cout<<"Both cars are currently being serviced. All parts are being tested and repaired."<<endl;
+    vector<Component*>::iterator it;
+    for(it = components.begin(); it != components.end(); ++it)
+        (*it)->repair();
+
+    car1->repair();
+    car2->repair();
     // maybe add reliability to Car and set it back to original value after being serviced
 }     
 

@@ -9,7 +9,6 @@ void PracticeTest::test(Engineering* engineering, TestType type) {
     // randomise number betweeen 0 and 3 and cast random int to TestResult
 
     if(type == PRACTICE) {
-        srand(time(0));
         int randomTest = rand() % 3;
         TestResult Result = static_cast<TestResult>(randomTest);
         vector<Component*> Components = engineering->getComponents();

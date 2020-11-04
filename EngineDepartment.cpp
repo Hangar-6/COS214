@@ -11,7 +11,7 @@ EngineDepartment::~EngineDepartment() {}
 Component* EngineDepartment::produce(int performance) {
     if(performance > 0) {
         component->setPerformance(performance);
-        cout<<"Engine has been produced with a performance value of "<<performance<<" horsepower"<<endl;
+        // cout<<"Engine has been produced with a performance value of "<<performance<<endl;
     }
     return component;
 }
