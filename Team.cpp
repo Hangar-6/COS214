@@ -20,6 +20,18 @@ void Team::addPoints(int d1Points, int d2Points) {
     ConstructorPoints += (d1Points + d2Points);
 }
 
+int Team::getTeamPoints(){
+    return ConstructorPoints;
+}
+
+int Team::getCar1Points(){
+    return Driver1Points;
+}
+
+int Team::getCar2Points(){
+    return Driver2Points;
+}
+
 Cars Team::getCars() {
     Cars cars = {car1, car2};
     return cars;
@@ -32,6 +44,12 @@ Engineers Team::getEngineers() {
 
 string Team::getTeamName() {
     return teamName;
+}
+
+void Team::printSeasonResults(){
+    cout << endl << "---------End of season results---------" << endl;
+    cout << "CONSTRUCTOR POINTS \n" << getTeamName() << "\t" << getTeamPoints() << endl;
+    cout << "DRIVER POINTS \n" << "Car 1" << "\t" << getCar1Points() << endl << "Car 2" << "\t" << getCar2Points() << endl << endl;
 }
 
 void Team::setConstructorPoints(int p) {

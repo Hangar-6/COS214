@@ -13,6 +13,7 @@ using namespace std;
 #include "CarAdapter.h"
 #include "Storage.h"
 #include <string>
+#include <iostream>
 
 class Logistics;
 class Strategist;
@@ -51,9 +52,13 @@ class Team {
         Team(string name);
         ~Team();
         void addPoints(int d1Points, int d2Points);
+        int getTeamPoints();
+        int getCar1Points();
+        int getCar2Points();
         Cars getCars();
         Engineers getEngineers();
         string getTeamName();
+        void printSeasonResults();
         void transport(RaceWeekend* race);
         void test();
         void test(TestType type, Engineering* engineering);

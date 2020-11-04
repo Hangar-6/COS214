@@ -59,8 +59,8 @@ void RaceWeekend::runSessions(Team* team){
 	*/
 	FinishPosition p = practice->runSession(team);
 	//Example output
-	cout << team->getTeamName() << " have completed their practice laps with car 1 finishing in position " << p.car1 <<
-	" and car 2 finishing in position " << p.car2 << endl;
+	cout <<"#####Practice#### \n"<< team->getTeamName() << " have completed their practice laps with car 1 having " << practice1 <<
+	" practice laps and car 2 having " << practice2 << " practice laps." << endl << endl;
 
 	/*
 	2. Qualifyers
@@ -70,8 +70,9 @@ void RaceWeekend::runSessions(Team* team){
 	FinishPosition q = qualifying->runSession(team);
 
 	//Example output
-	cout << "After completing their qualifying lap, car 1 finished in position " << q.car1 <<
-	" and car 2 finished in position " << q.car2 << endl;
+	cout <<"#####Qualifyers#### \n"<< "After completing the qualifying lap, car 1 finished at position " << q.car1 <<
+	" and car 2 finshed at position " << q.car2 << endl << endl;
+
 
 	/*
 	3. Race
@@ -80,14 +81,20 @@ void RaceWeekend::runSessions(Team* team){
 	//check for pole positions on qualifying
 
 	//Example output
-	cout << "With the race completed, car 1 finished in position " << r.car1 <<
-	" and car 2 finished in position " << r.car2 << endl;
+	cout <<"#####Race#### \n"<< "Its lights out and away we go! \nWith the final race completed, car 1 finished at position " << r.car1 <<
+	" and car 2 finshed at position " << r.car2 << endl << endl;
 
 	//Finally, determine points for team and drivers
 	int d1 = determineDriverPoints(r.car1);  //car1
 	int d2 = determineDriverPoints(r.car2);  //car2
 	team->addPoints(d1,d2);
 	team->raceEnd();
+	team->setConstructorPoints(t);
+
+	cout << "Season so far... \n" << team->getTeamName() <<" \t" << team->getTeamPoints() << " points\nCar 1 \t" << team->getCar1Points() << " points \nCar 2 \t" << team->getCar2Points() << " points" << endl;
+
+	cout << "Thanks for joining us this weekend and we hope to see you next time!" << endl << endl;
+
 }
 
 Location* RaceWeekend::getLocation() {
