@@ -70,7 +70,7 @@ void RaceWeekend::runSessions(Team* team){
 	FinishPosition q = qualifying->runSession(team);
 
 	//Example output
-	cout <<"#####Qualifyers#### \n"<< "After completing the qualifying lap, car 1 finished in position " << q.car1 <<
+	cout <<"#####Qualifying### \n"<< "After completing the qualifying lap, car 1 finished in position " << q.car1 <<
 	" and car 2 finshed in position " << q.car2 << endl << endl;
 
 
