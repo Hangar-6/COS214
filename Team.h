@@ -62,7 +62,6 @@ class Team {
         void transport(RaceWeekend* race);
         void test();
         void test(TestType type, Engineering* engineering);
-        void setConstructorPoints(int p);
         void setCar(Car* car);
         void setEngineers(Engineering* current, Engineering* next);
         void setStrategist(Strategist* strategist);

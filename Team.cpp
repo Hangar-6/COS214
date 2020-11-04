@@ -52,10 +52,6 @@ void Team::printSeasonResults(){
     cout << "DRIVER POINTS \n" << "Car 1" << "\t" << Driver1Points << endl << "Car 2" << "\t" << Driver2Points << endl << endl;
 }
 
-void Team::setConstructorPoints(int p) {
-    ConstructorPoints = p;
-}
-
 void Team::setCar(Car* car) {
     car1 = car;
     car2 = car->clone();
