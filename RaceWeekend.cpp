@@ -90,7 +90,7 @@ void RaceWeekend::runSessions(Team* team){
 	team->addPoints(d1,d2);
 	team->raceEnd();
 
-	cout << "Season so far... \n" << team->getTeamName() <<" \t" << team->getTeamPoints() << " points\nCar 1 \t" << team->getCar1Points() << " points \nCar 2 \t" << team->getCar2Points() << " points" << endl;
+	cout << "Season so far... \n" << team->getTeamName() <<" \t" << team->getTeamPoints() << " points\nDriver 1 \t" << team->getCar1Points() << " points \nDriver 2 \t" << team->getCar2Points() << " points" << endl;
 
 	cout << "Thanks for joining us this weekend and we hope to see you next time!" << endl << endl;
 
