@@ -31,7 +31,7 @@ int main() {
 
     /*** RACING ***/
 
-    cout<<"Welcome to the 2021 Formula One Championship"<<endl<<endl;
+    cout<<"Welcome to the 2020 Formula One Championship"<<endl<<endl;
 
     //ADD TO INTRO MESSAGE
 
@@ -50,11 +50,12 @@ int main() {
         /*** START RACING ***/
         cout<<"Race Weekend: "<<(i+1)<<" ---------------------------------------------"<<endl<<endl;
         races[i]->runSessions(team);
+        team->transport(nullptr);
         cout<<endl<<endl<<endl;
     }
 
     //OUTPUT SEASON RESULTS
-    team->printSeasonResults();
+    team->seasonEnd();
 
     for(int i = 0; i < 22; i++) {
       delete races[i];

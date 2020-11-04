@@ -48,8 +48,8 @@ string Team::getTeamName() {
 
 void Team::printSeasonResults(){
     cout << endl << "---------End of season results---------" << endl;
-    cout << "CONSTRUCTOR POINTS \n" << getTeamName() << "\t" << getTeamPoints() << endl;
-    cout << "DRIVER POINTS \n" << "Car 1" << "\t" << getCar1Points() << endl << "Car 2" << "\t" << getCar2Points() << endl << endl;
+    cout << "CONSTRUCTOR POINTS \n" << teamName << "\t" << ConstructorPoints << endl;
+    cout << "DRIVER POINTS \n" << "Car 1" << "\t" << Driver1Points << endl << "Car 2" << "\t" << Driver2Points << endl << endl;
 }
 
 void Team::setConstructorPoints(int p) {
@@ -138,8 +138,9 @@ void Team::transport(RaceWeekend* race) {
 }
 
 void Team::seasonEnd() {
-    cout << teamName << " finished with " << ConstructorPoints << " points\n";
-    cout << "Driver 1 finished with " << Driver1Points << " points and Driver 2 finished with " << Driver2Points << " points\n";
+    cout << endl << "---------End of season results---------" << endl;
+    cout << "CONSTRUCTOR POINTS \n" << teamName << "\t" << ConstructorPoints << endl;
+    cout << "DRIVER POINTS \n" << "Car 1" << "\t" << Driver1Points << endl << "Car 2" << "\t" << Driver2Points << endl << endl;
     // transfer next components to current components
     vector<Component*> c1 = current->getComponents();
     vector<Component*> c2 = next->getComponents();
