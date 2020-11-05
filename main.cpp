@@ -31,7 +31,13 @@ int main() {
 
     /*** RACING ***/
 
-    cout<<"Welcome to the 2020 Formula One Championship"<<endl<<endl;
+    cout<<"Welcome to the 2020 Formula One Championship."<<endl;
+    cout<<"The championship will require all teams to perform the following procedures before racing:"<<endl;
+    cout<<"1. All teams should test and validate all components before transporting them to the race weekend's location."<<endl;
+    cout<<"2. All teams must either transport their equipment by truck (European race weekend) or ship (non-european race weekend)."<<endl;
+    cout<<"3. All race cars are to be transported by plane."<<endl<<endl;
+    cout<<"Once all procedures have been completed, may a team participate in a race weekend."<<endl;
+    cout<<"Good luck to all racers!"<<endl<<endl;
 
     //ADD TO INTRO MESSAGE
 
